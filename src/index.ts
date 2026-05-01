@@ -1,6 +1,9 @@
 export { Avatar } from "./components/Avatar";
 export { Badge } from "./components/Badge";
 export { Button } from "./components/Button";
+export { Card, CardHeader, CardTitle, CardValue } from "./components/Card";
+export { DataTable } from "./components/DataTable";
+export type { ColumnT } from "./components/DataTable";
 export { ConfirmDialog } from "./components/ConfirmDialog";
 export { ContextMenu } from "./components/ContextMenu";
 export { Dialog } from "./components/Dialog";

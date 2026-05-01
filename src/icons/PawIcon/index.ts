@@ -1,0 +1,1 @@
+export { PawIcon } from "./PawIcon";
