@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@import "../../../src/styles/tokens.css";
+@import "../../../src/styles/globals.css";
+
+@source "./**/*.{ts,tsx}";
+@source "../../../src/**/*.{ts,tsx}";
+
+/* Playground overrides — allow scrolling on long showcase pages */
+html,
+body {
+  height: auto;
+  overflow: auto;
+}
+
+body {
+  min-height: 100dvh;
+}

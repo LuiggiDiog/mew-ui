@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "noUncheckedIndexedAccess": true,
+    "baseUrl": ".",
+    "paths": {
+      "@mew/ui": ["./src/index.ts"],
+      "@mew/ui/*": ["./src/*"]
+    }
+  },
+  "include": ["src/**/*", "tsup.config.ts", "vitest.config.ts", "eslint.config.mjs"],
+  "exclude": ["node_modules", "dist", "playground"]
+}
