@@ -3,7 +3,8 @@
 @import "../../../src/styles/globals.css";
 
 @source "./**/*.{ts,tsx}";
-@source "../../../src/**/*.{ts,tsx}";
+@source "../../../src/components/**/*.tsx";
+@source "../../../src/icons/**/*.tsx";
 
 /* Playground overrides — allow scrolling on long showcase pages */
 html,
