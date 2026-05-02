@@ -28,8 +28,8 @@
   },
   "scripts": {
     "build": "tsup",
-    "dev": "tsup --watch",
-    "dev:all": "npm run dev & npm --prefix ./playground run dev",
+    "dev": "tsup --watch --ignore-watch playground --ignore-watch \"**/.next/**\"",
+    "dev:playground": "npm --prefix ./playground run dev",
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "eslint"

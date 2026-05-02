@@ -6,7 +6,8 @@
     "dev": "next dev --port 3101",
     "build": "next build",
     "start": "next start --port 3101",
-    "lint": "eslint"
+    "lint": "eslint",
+    "check:showcase": "node ./scripts/check-showcase-coverage.mjs"
   },
   "dependencies": {
     "@radix-ui/react-alert-dialog": "^1.1.15",
