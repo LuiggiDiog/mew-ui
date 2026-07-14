@@ -7,7 +7,7 @@ type BreadcrumbListProps = HTMLAttributes<HTMLOListElement>;
 type BreadcrumbItemProps = HTMLAttributes<HTMLLIElement>;
 type BreadcrumbLinkProps = AnchorHTMLAttributes<HTMLAnchorElement>;
 type BreadcrumbPageProps = HTMLAttributes<HTMLSpanElement>;
-type BreadcrumbSeparatorProps = HTMLAttributes<HTMLSpanElement>;
+type BreadcrumbSeparatorProps = HTMLAttributes<HTMLLIElement>;
 
 export function Breadcrumb({ className, children, ...props }: BreadcrumbProps) {
   return (
@@ -20,7 +20,10 @@ export function Breadcrumb({ className, children, ...props }: BreadcrumbProps) {
 export function BreadcrumbList({ className, children, ...props }: BreadcrumbListProps) {
   return (
     <ol
-      className={cn("flex flex-wrap items-center gap-1.5 text-sm text-text-secondary", className)}
+      className={cn(
+        "m-0 flex list-none flex-wrap items-center gap-1 p-0 text-sm text-text-secondary",
+        className
+      )}
       {...props}
     >
       {children}
@@ -30,7 +33,7 @@ export function BreadcrumbList({ className, children, ...props }: BreadcrumbList
 
 export function BreadcrumbItem({ className, children, ...props }: BreadcrumbItemProps) {
   return (
-    <li className={cn("inline-flex items-center gap-1.5", className)} {...props}>
+    <li className={cn("inline-flex list-none items-center gap-1", className)} {...props}>
       {children}
     </li>
   );
@@ -40,7 +43,7 @@ export function BreadcrumbLink({ className, children, ...props }: BreadcrumbLink
   return (
     <a
       className={cn(
-        "hover:text-text-primary transition-colors",
+        "rounded-md px-1 py-0.5 text-text-secondary no-underline transition-colors hover:bg-surface-elevated hover:text-text-primary",
         className
       )}
       {...props}
@@ -54,7 +57,7 @@ export function BreadcrumbPage({ className, children, ...props }: BreadcrumbPage
   return (
     <span
       aria-current="page"
-      className={cn("font-medium text-text-primary", className)}
+      className={cn("rounded-md px-1 py-0.5 font-medium text-text-primary", className)}
       {...props}
     >
       {children}
@@ -64,8 +67,13 @@ export function BreadcrumbPage({ className, children, ...props }: BreadcrumbPage
 
 export function BreadcrumbSeparator({ className, ...props }: BreadcrumbSeparatorProps) {
   return (
-    <span aria-hidden="true" className={cn("text-text-secondary/40", className)} {...props}>
-      <ChevronRightIcon className="w-3.5 h-3.5" />
-    </span>
+    <li
+      aria-hidden="true"
+      role="presentation"
+      className={cn("inline-flex h-5 w-5 list-none items-center justify-center text-text-secondary/40", className)}
+      {...props}
+    >
+      <ChevronRightIcon className="h-3.5 w-3.5" />
+    </li>
   );
 }

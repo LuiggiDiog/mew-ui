@@ -15,6 +15,8 @@ import {
   PaginationButton,
   PaginationContent,
   PaginationItem,
+  PaginationNext,
+  PaginationPrevious,
   Tabs,
   TabsContent,
   TabsList,
@@ -46,8 +48,10 @@ export default function NavigationPreview({ name }: { name: string }) {
       return (
         <Pagination>
           <PaginationContent>
+            <PaginationItem><PaginationPrevious /></PaginationItem>
             <PaginationItem><PaginationButton isActive>1</PaginationButton></PaginationItem>
             <PaginationItem><PaginationButton>2</PaginationButton></PaginationItem>
+            <PaginationItem><PaginationNext /></PaginationItem>
           </PaginationContent>
         </Pagination>
       );

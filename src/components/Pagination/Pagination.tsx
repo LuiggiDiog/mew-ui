@@ -25,7 +25,7 @@ export function Pagination({ className, children, ...props }: PaginationProps) {
 
 export function PaginationContent({ className, children, ...props }: PaginationContentProps) {
   return (
-    <ul className={cn("flex items-center gap-1", className)} {...props}>
+    <ul className={cn("m-0 flex list-none items-center justify-center gap-1 p-0", className)} {...props}>
       {children}
     </ul>
   );
@@ -33,7 +33,7 @@ export function PaginationContent({ className, children, ...props }: PaginationC
 
 export function PaginationItem({ className, children, ...props }: PaginationItemProps) {
   return (
-    <li className={cn(className)} {...props}>
+    <li className={cn("inline-flex list-none items-center", className)} {...props}>
       {children}
     </li>
   );
@@ -46,11 +46,11 @@ export function PaginationButton({ isActive, disabled, className, children, ...p
       disabled={disabled}
       aria-current={isActive ? "page" : undefined}
       className={cn(
-        "inline-flex h-8 min-w-[2rem] appearance-none items-center justify-center rounded-lg border px-2 text-sm font-medium shadow-none transition-colors",
+        "inline-flex h-9 min-w-9 appearance-none items-center justify-center rounded-xl border px-3 text-sm font-medium shadow-none transition-colors",
         "disabled:opacity-40 disabled:cursor-not-allowed",
         isActive
           ? "border-accent bg-accent text-white"
-          : "border-border bg-surface text-text-secondary hover:bg-surface-elevated hover:text-text-primary",
+          : "border-border/60 bg-surface text-text-secondary hover:border-border hover:bg-surface-elevated hover:text-text-primary",
         className
       )}
       {...props}
@@ -62,16 +62,16 @@ export function PaginationButton({ isActive, disabled, className, children, ...p
 
 export function PaginationPrevious({ className, ...props }: PaginationButtonProps) {
   return (
-    <PaginationButton className={cn("gap-1", className)} aria-label="Previous page" {...props}>
-      <ChevronLeftIcon className="w-4 h-4" />
+    <PaginationButton className={cn("px-2", className)} aria-label="Previous page" {...props}>
+      <ChevronLeftIcon className="h-4 w-4" />
     </PaginationButton>
   );
 }
 
 export function PaginationNext({ className, ...props }: PaginationButtonProps) {
   return (
-    <PaginationButton className={cn("gap-1", className)} aria-label="Next page" {...props}>
-      <ChevronRightIcon className="w-4 h-4" />
+    <PaginationButton className={cn("px-2", className)} aria-label="Next page" {...props}>
+      <ChevronRightIcon className="h-4 w-4" />
     </PaginationButton>
   );
 }
@@ -80,7 +80,7 @@ export function PaginationEllipsis({ className, ...props }: HTMLAttributes<HTMLS
   return (
     <span
       aria-hidden="true"
-      className={cn("flex h-8 w-8 items-center justify-center text-text-secondary", className)}
+      className={cn("flex h-9 w-9 items-center justify-center rounded-xl text-text-secondary", className)}
       {...props}
     >
       &hellip;
