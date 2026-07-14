@@ -20,12 +20,12 @@ type PropsT = {
 export function ComponentPreview({ name }: PropsT) {
   const component = SHOWCASE_COMPONENTS.find((c) => c.name === name);
   if (!component) {
-    return <p className="text-xs text-text-secondary">Composed export. See usage snippet below.</p>;
+    return <p className="m-0 text-xs text-text-secondary">Composed export. See usage snippet below.</p>;
   }
 
   const Preview = categoryPreviews[component.category as keyof typeof categoryPreviews];
   if (!Preview) {
-    return <p className="text-xs text-text-secondary">Composed export. See usage snippet below.</p>;
+    return <p className="m-0 text-xs text-text-secondary">Composed export. See usage snippet below.</p>;
   }
 
   return <Preview name={name} />;

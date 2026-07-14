@@ -7,14 +7,14 @@ export default function HomePage() {
   return (
     <div className="space-y-8">
       <header className="space-y-2">
-        <h1 className="text-3xl font-bold text-text-primary">Mew UI Design System</h1>
-        <p className="max-w-3xl text-sm text-text-secondary">
+        <h1 className="m-0 text-3xl font-bold text-text-primary">Mew UI Design System</h1>
+        <p className="m-0 max-w-3xl text-sm text-text-secondary">
           A calm, practical, component-first documentation experience to implement and replicate UI patterns with less friction.
         </p>
       </header>
 
       <section className="rounded-xl border border-border bg-surface p-5">
-        <h2 className="text-base font-semibold text-text-primary">Recommended path</h2>
+        <h2 className="m-0 text-base font-semibold text-text-primary">Recommended path</h2>
         <div className="mt-3 flex flex-wrap gap-2">
           <Link href="/components/getting-started" className="rounded-lg border border-border px-3 py-1.5 text-xs text-text-secondary hover:text-text-primary">
             1. Getting started
@@ -38,14 +38,14 @@ export default function HomePage() {
             href={`/components/${category.key}`}
             className="rounded-xl border border-border bg-surface p-4 transition-colors hover:bg-surface-elevated"
           >
-            <h2 className="text-base font-semibold text-text-primary">{category.title}</h2>
-            <p className="mt-1 text-sm text-text-secondary">{category.description}</p>
+            <h2 className="m-0 text-base font-semibold text-text-primary">{category.title}</h2>
+            <p className="m-0 mt-1 text-sm text-text-secondary">{category.description}</p>
           </Link>
         ))}
       </section>
 
       <section className="rounded-xl border border-border bg-surface p-4">
-        <h2 className="text-base font-semibold text-text-primary">Catalog shortcuts</h2>
+        <h2 className="m-0 text-base font-semibold text-text-primary">Catalog shortcuts</h2>
         <div className="mt-3 flex flex-wrap gap-2">
           <Link href="/components/getting-started" className="rounded-lg border border-border px-3 py-1.5 text-xs text-text-secondary hover:text-text-primary">
             Read getting started

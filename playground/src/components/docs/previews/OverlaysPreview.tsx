@@ -45,7 +45,7 @@ export default function OverlaysPreview({ name }: { name: string }) {
           <Button size="sm" onClick={() => setDialogOpen(true)}>Open dialog</Button>
           <Button size="sm" variant="outline" onClick={() => setConfirmOpen(true)}>Open confirm</Button>
           <Dialog open={dialogOpen} onOpenChange={setDialogOpen} title="Dialog title" description="Confirm your action">
-            <p className="text-sm text-text-secondary">This is a dialog content example.</p>
+            <p className="m-0 text-sm text-text-secondary">This is a dialog content example.</p>
           </Dialog>
           <ConfirmDialog open={confirmOpen} onOpenChange={setConfirmOpen} title="Delete item?" description="This action cannot be undone." onConfirm={() => setConfirmOpen(false)} />
         </div>
@@ -65,7 +65,7 @@ export default function OverlaysPreview({ name }: { name: string }) {
         <Popover>
           <PopoverTrigger asChild><Button size="sm" variant="outline">Popover</Button></PopoverTrigger>
           <PopoverContent>
-            <p className="text-sm">Popover content.</p>
+            <p className="m-0 text-sm">Popover content.</p>
             <div className="mt-2 flex justify-end"><PopoverClose asChild><Button size="sm">Close</Button></PopoverClose></div>
           </PopoverContent>
         </Popover>
@@ -93,6 +93,6 @@ export default function OverlaysPreview({ name }: { name: string }) {
         </TooltipProvider>
       );
     default:
-      return <p className="text-xs text-text-secondary">See usage snippet below.</p>;
+      return <p className="m-0 text-xs text-text-secondary">See usage snippet below.</p>;
   }
 }

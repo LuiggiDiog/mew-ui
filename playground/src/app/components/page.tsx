@@ -7,8 +7,8 @@ export default function ComponentsIndexPage() {
   return (
     <div className="space-y-6">
       <header className="space-y-2">
-        <h1 className="text-2xl font-semibold text-text-primary">Documentation map</h1>
-        <p className="text-sm text-text-secondary">Navigate by intent: start with setup, then explore component families with live previews, usage patterns, and composition exports.</p>
+        <h1 className="m-0 text-2xl font-semibold text-text-primary">Documentation map</h1>
+        <p className="m-0 text-sm text-text-secondary">Navigate by intent: start with setup, then explore component families with live previews, usage patterns, and composition exports.</p>
       </header>
 
       <CategoryNav />
@@ -24,9 +24,9 @@ export default function ComponentsIndexPage() {
               href={`/components/${category.key}`}
               className="rounded-xl border border-border bg-surface p-4 transition-colors hover:bg-surface-elevated"
             >
-              <h2 className="text-base font-semibold text-text-primary">{category.title}</h2>
-              <p className="mt-1 text-sm text-text-secondary">{category.description}</p>
-              <p className="mt-3 text-xs text-text-secondary">{isGuide ? "Guide" : `${count} components`}</p>
+              <h2 className="m-0 text-base font-semibold text-text-primary">{category.title}</h2>
+              <p className="m-0 mt-1 text-sm text-text-secondary">{category.description}</p>
+              <p className="m-0 mt-3 text-xs text-text-secondary">{isGuide ? "Guide" : `${count} components`}</p>
             </Link>
           );
         })}

@@ -24,8 +24,8 @@ export default function IconsPage() {
   return (
     <div className="space-y-6">
       <header className="space-y-2">
-        <h1 className="text-2xl font-semibold text-text-primary">Icon catalog</h1>
-        <p className="text-sm text-text-secondary">All icon exports from @luiggidiog/mew-ui/icons with ready-to-copy usage snippets.</p>
+        <h1 className="m-0 text-2xl font-semibold text-text-primary">Icon catalog</h1>
+        <p className="m-0 text-sm text-text-secondary">All icon exports from @luiggidiog/mew-ui/icons with ready-to-copy usage snippets.</p>
       </header>
 
       <CategoryNav />
@@ -49,7 +49,7 @@ export default function IconsPage() {
                 <div className="rounded-lg border border-border bg-background p-2">
                   <Icon className="h-4 w-4" />
                 </div>
-                <p className="text-sm font-medium text-text-primary">{name}</p>
+                <p className="m-0 text-sm font-medium text-text-primary">{name}</p>
               </div>
 
               <CodeBlock language="tsx" code={getIconImportSnippet(name)} />

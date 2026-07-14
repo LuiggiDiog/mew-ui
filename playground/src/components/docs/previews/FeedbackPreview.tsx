@@ -48,6 +48,6 @@ export default function FeedbackPreview({ name }: { name: string }) {
         </div>
       );
     default:
-      return <p className="text-xs text-text-secondary">See usage snippet below.</p>;
+      return <p className="m-0 text-xs text-text-secondary">See usage snippet below.</p>;
   }
 }

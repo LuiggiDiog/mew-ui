@@ -121,11 +121,11 @@ export function Select(props: PropsT) {
       </SelectPrimitive.Root>
 
       {description && (
-        <p className="text-xs text-text-secondary">{description}</p>
+        <p className="m-0 text-xs text-text-secondary">{description}</p>
       )}
 
       {error && (
-        <p role="alert" className="text-xs text-error">
+        <p role="alert" className="m-0 text-xs text-error">
           {error}
         </p>
       )}

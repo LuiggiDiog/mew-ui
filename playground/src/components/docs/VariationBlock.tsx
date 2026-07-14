@@ -8,7 +8,7 @@ type PropsT = {
 export function VariationBlock({ title, code }: PropsT) {
   return (
     <div className="space-y-2">
-      <p className="text-xs font-medium text-text-secondary">{title}</p>
+      <p className="m-0 text-xs font-medium text-text-secondary">{title}</p>
       <CodeBlock language="tsx" code={code} />
     </div>
   );

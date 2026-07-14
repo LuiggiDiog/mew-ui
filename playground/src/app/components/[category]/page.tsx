@@ -42,8 +42,8 @@ export default async function ComponentsCategoryPage({ params }: PropsT) {
 
       <div className="space-y-6">
         <header className="space-y-2">
-          <h1 className="text-2xl font-semibold text-text-primary">{categoryMeta.title}</h1>
-          <p className="text-sm text-text-secondary">{categoryMeta.description}</p>
+          <h1 className="m-0 text-2xl font-semibold text-text-primary">{categoryMeta.title}</h1>
+          <p className="m-0 text-sm text-text-secondary">{categoryMeta.description}</p>
         </header>
 
         <section className="space-y-4">

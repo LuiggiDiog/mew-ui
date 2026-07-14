@@ -30,14 +30,14 @@ export default function GettingStartedPage() {
 
       <div className="space-y-6">
         <header className="space-y-2">
-          <h1 className="text-2xl font-semibold text-text-primary">Getting started</h1>
-          <p className="text-sm text-text-secondary">
+          <h1 className="m-0 text-2xl font-semibold text-text-primary">Getting started</h1>
+          <p className="m-0 text-sm text-text-secondary">
             Minimal setup and core principles to keep a calm, readable, and consistent Mew UI implementation.
           </p>
         </header>
 
         <section id="principles" className="scroll-mt-24 space-y-3 rounded-xl border border-border bg-surface p-5">
-          <h2 className="text-base font-semibold text-text-primary">Design principles</h2>
+          <h2 className="m-0 text-base font-semibold text-text-primary">Design principles</h2>
           <ul className="list-disc space-y-1 pl-4 text-sm text-text-secondary">
             <li>Keep one primary action per section.</li>
             <li>Prefer spacing, contrast, and borders before heavy effects.</li>
@@ -47,17 +47,17 @@ export default function GettingStartedPage() {
         </section>
 
         <section id="install" className="scroll-mt-24 space-y-3 rounded-xl border border-border bg-surface p-5">
-          <h2 className="text-base font-semibold text-text-primary">Install</h2>
+          <h2 className="m-0 text-base font-semibold text-text-primary">Install</h2>
           <CodeBlock language="bash" code={installSnippet} />
         </section>
 
         <section id="styles" className="scroll-mt-24 space-y-3 rounded-xl border border-border bg-surface p-5">
-          <h2 className="text-base font-semibold text-text-primary">Import styles</h2>
+          <h2 className="m-0 text-base font-semibold text-text-primary">Import styles</h2>
           <CodeBlock language="tsx" code={setupSnippet} />
         </section>
 
         <section id="first-component" className="scroll-mt-24 space-y-3 rounded-xl border border-border bg-surface p-5">
-          <h2 className="text-base font-semibold text-text-primary">First component</h2>
+          <h2 className="m-0 text-base font-semibold text-text-primary">First component</h2>
           <CodeBlock language="tsx" code={usageSnippet} />
         </section>
       </div>

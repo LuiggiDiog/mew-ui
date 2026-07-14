@@ -58,6 +58,6 @@ export default function FormsPreview({ name }: { name: string }) {
     case "Textarea":
       return <Textarea placeholder="Write a message" />;
     default:
-      return <p className="text-xs text-text-secondary">See usage snippet below.</p>;
+      return <p className="m-0 text-xs text-text-secondary">See usage snippet below.</p>;
   }
 }
