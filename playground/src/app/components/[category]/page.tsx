@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { Toaster } from "@luiggidiog/mew-ui";
 import { ComponentShowcase } from "../../../components/docs/ComponentShowcase";
 import { DocsSidebar } from "../../../components/docs/DocsSidebar";
+import { GettingStartedContent } from "../../../components/docs/GettingStartedContent";
 import { CATEGORIES, type CategoryKeyT } from "../../../lib/showcase/categories";
 import { getComponentsByCategory } from "../../../lib/showcase/component-registry";
 
@@ -17,7 +18,7 @@ export default async function ComponentsCategoryPage({ params }: PropsT) {
   const { category } = await params;
 
   if (category === "getting-started") {
-    notFound();
+    return <GettingStartedContent />;
   }
 
   const categoryMeta = CATEGORIES.find((item) => item.key === category);

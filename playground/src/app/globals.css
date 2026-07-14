@@ -10,3 +10,8 @@ body {
   color: var(--mew-color-text-primary);
   font-family: var(--mew-font-sans);
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

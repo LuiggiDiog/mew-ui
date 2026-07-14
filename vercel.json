@@ -12,12 +12,20 @@
       "dest": "/playground/_next/$1"
     },
     {
-      "src": "/components/([^/]+)",
-      "dest": "/playground/components/[category]?nxtPcategory=$1"
+      "src": "/components/getting-started\\.rsc",
+      "dest": "/playground/components/getting-started.rsc"
+    },
+    {
+      "src": "/components/getting-started",
+      "dest": "/playground/components/getting-started"
     },
     {
       "src": "/components/([^/]+)\\.rsc",
       "dest": "/playground/components/[category].rsc?nxtPcategory=$1"
+    },
+    {
+      "src": "/components/([^/]+)",
+      "dest": "/playground/components/[category]?nxtPcategory=$1"
     },
     {
       "src": "/(.*)",
