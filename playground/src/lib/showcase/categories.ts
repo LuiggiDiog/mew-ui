@@ -5,6 +5,11 @@ export const CATEGORIES = [
     description: "How to install, import, and apply design tokens and principles.",
   },
   {
+    key: "foundations",
+    title: "Foundations",
+    description: "Application structure, page framing, and persistent navigation.",
+  },
+  {
     key: "actions",
     title: "Actions",
     description: "User-triggered actions and command surfaces.",
@@ -12,17 +17,17 @@ export const CATEGORIES = [
   {
     key: "forms",
     title: "Forms",
-    description: "Inputs, controls, and field composition.",
+    description: "Inputs, controls, validation, and field composition.",
   },
   {
     key: "navigation",
     title: "Navigation",
-    description: "Wayfinding and multi-view navigation patterns.",
+    description: "Wayfinding, steps, and multi-view navigation patterns.",
   },
   {
     key: "feedback",
     title: "Feedback",
-    description: "Status, progress, and transient notifications.",
+    description: "Status, progress, empty, loading, and transient notifications.",
   },
   {
     key: "overlays",
@@ -38,6 +43,11 @@ export const CATEGORIES = [
     key: "layout",
     title: "Layout",
     description: "Structure, spacing, and composition primitives.",
+  },
+  {
+    key: "patterns",
+    title: "Patterns",
+    description: "Composed product patterns for common app screens.",
   },
 ] as const;
 

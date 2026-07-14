@@ -207,3 +207,37 @@ small supporting detail.
 - Don't use more than three text weights in one view.
 - Don't rely on heavy shadows for hierarchy.
 - Don't turn the cat reference into a primary visual element.
+
+## Product Kit Scope
+
+Mew UI now supports complete product screens, not only isolated primitives.
+The expanded component set should still feel like one quiet system:
+application shells, page headers, toolbars, form flows, tables, empty states,
+and composed patterns must share the same spacing, border, typography, and
+interaction language.
+
+- Foundations (`AppShell`, `PageHeader`, `SidebarNav`, `TopNav`, `Toolbar`) define structure without owning product content.
+- Product patterns (`DashboardGrid`, `SettingsLayout`, `LoginCard`, `FilterBar`) should stay composable and avoid business-specific assumptions.
+- Advanced controls (`Combobox`, `Command`, `FileUpload`, `PasswordInput`, `NumberInput`, `DateInput`) should prefer native semantics and lightweight behavior before adding dependencies.
+- Data and feedback components should prioritize readability, scan speed, and clear recovery paths.
+
+## Themes
+
+Theme support is CSS-variable first and does not require a provider.
+Consumers may set `data-mew-theme="dark"`, `data-mew-theme="light"`, or
+`data-mew-theme="system"` on any parent element.
+
+- Dark remains the default to preserve existing implementations.
+- Light follows the original neutral palette in this document.
+- System should map to user preference without changing component APIs.
+- Component styles must use token-backed Tailwind utilities or CSS variables, not one-off color values.
+
+## Documentation Experience
+
+The playground is part of the product surface. It should demonstrate how to
+build real screens while keeping examples compact and copyable.
+
+- Every public component export should be represented in the showcase registry.
+- Each component page should include purpose, when-to-use guidance, usage, variations, and composition exports.
+- The `Build an app` guide should remain a small canonical example of composing foundations, actions, data display, feedback, and layout.
+- Navigation should stay consistent across Start, All, Build an app, component categories, and Icons.

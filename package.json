@@ -49,6 +49,10 @@
       "types": "./dist/components/alert.d.ts",
       "import": "./dist/components/alert.js"
     },
+    "./app-shell": {
+      "types": "./dist/components/app-shell.d.ts",
+      "import": "./dist/components/app-shell.js"
+    },
     "./aspect-ratio": {
       "types": "./dist/components/aspect-ratio.d.ts",
       "import": "./dist/components/aspect-ratio.js"
@@ -61,6 +65,10 @@
       "types": "./dist/components/badge.d.ts",
       "import": "./dist/components/badge.js"
     },
+    "./banner": {
+      "types": "./dist/components/banner.d.ts",
+      "import": "./dist/components/banner.js"
+    },
     "./breadcrumb": {
       "types": "./dist/components/breadcrumb.d.ts",
       "import": "./dist/components/breadcrumb.js"
@@ -68,6 +76,14 @@
     "./button": {
       "types": "./dist/components/button.d.ts",
       "import": "./dist/components/button.js"
+    },
+    "./button-group": {
+      "types": "./dist/components/button-group.d.ts",
+      "import": "./dist/components/button-group.js"
+    },
+    "./callout": {
+      "types": "./dist/components/callout.d.ts",
+      "import": "./dist/components/callout.js"
     },
     "./card": {
       "types": "./dist/components/card.d.ts",
@@ -81,6 +97,18 @@
       "types": "./dist/components/code-block.d.ts",
       "import": "./dist/components/code-block.js"
     },
+    "./combobox": {
+      "types": "./dist/components/combobox.d.ts",
+      "import": "./dist/components/combobox.js"
+    },
+    "./command": {
+      "types": "./dist/components/command.d.ts",
+      "import": "./dist/components/command.js"
+    },
+    "./confirm-action": {
+      "types": "./dist/components/confirm-action.d.ts",
+      "import": "./dist/components/confirm-action.js"
+    },
     "./confirm-dialog": {
       "types": "./dist/components/confirm-dialog.d.ts",
       "import": "./dist/components/confirm-dialog.js"
@@ -93,13 +121,33 @@
       "types": "./dist/components/context-menu.d.ts",
       "import": "./dist/components/context-menu.js"
     },
+    "./copy-button": {
+      "types": "./dist/components/copy-button.d.ts",
+      "import": "./dist/components/copy-button.js"
+    },
+    "./dashboard-grid": {
+      "types": "./dist/components/dashboard-grid.d.ts",
+      "import": "./dist/components/dashboard-grid.js"
+    },
     "./data-table": {
       "types": "./dist/components/data-table.d.ts",
       "import": "./dist/components/data-table.js"
     },
+    "./date-input": {
+      "types": "./dist/components/date-input.d.ts",
+      "import": "./dist/components/date-input.js"
+    },
+    "./description-list": {
+      "types": "./dist/components/description-list.d.ts",
+      "import": "./dist/components/description-list.js"
+    },
     "./dialog": {
       "types": "./dist/components/dialog.d.ts",
       "import": "./dist/components/dialog.js"
+    },
+    "./drawer": {
+      "types": "./dist/components/drawer.d.ts",
+      "import": "./dist/components/drawer.js"
     },
     "./dropdown-menu": {
       "types": "./dist/components/dropdown-menu.d.ts",
@@ -109,9 +157,29 @@
       "types": "./dist/components/empty-state.d.ts",
       "import": "./dist/components/empty-state.js"
     },
+    "./error-state": {
+      "types": "./dist/components/error-state.d.ts",
+      "import": "./dist/components/error-state.js"
+    },
+    "./fieldset": {
+      "types": "./dist/components/fieldset.d.ts",
+      "import": "./dist/components/fieldset.js"
+    },
+    "./file-upload": {
+      "types": "./dist/components/file-upload.d.ts",
+      "import": "./dist/components/file-upload.js"
+    },
+    "./filter-bar": {
+      "types": "./dist/components/filter-bar.d.ts",
+      "import": "./dist/components/filter-bar.js"
+    },
     "./form-field": {
       "types": "./dist/components/form-field.d.ts",
       "import": "./dist/components/form-field.js"
+    },
+    "./icon-button": {
+      "types": "./dist/components/icon-button.d.ts",
+      "import": "./dist/components/icon-button.js"
     },
     "./image-lightbox": {
       "types": "./dist/components/image-lightbox.d.ts",
@@ -137,9 +205,41 @@
       "types": "./dist/components/label.d.ts",
       "import": "./dist/components/label.js"
     },
+    "./link-button": {
+      "types": "./dist/components/link-button.d.ts",
+      "import": "./dist/components/link-button.js"
+    },
+    "./list": {
+      "types": "./dist/components/list.d.ts",
+      "import": "./dist/components/list.js"
+    },
+    "./loading-state": {
+      "types": "./dist/components/loading-state.d.ts",
+      "import": "./dist/components/loading-state.js"
+    },
+    "./login-card": {
+      "types": "./dist/components/login-card.d.ts",
+      "import": "./dist/components/login-card.js"
+    },
+    "./mew-empty-state": {
+      "types": "./dist/components/mew-empty-state.d.ts",
+      "import": "./dist/components/mew-empty-state.js"
+    },
+    "./number-input": {
+      "types": "./dist/components/number-input.d.ts",
+      "import": "./dist/components/number-input.js"
+    },
+    "./page-header": {
+      "types": "./dist/components/page-header.d.ts",
+      "import": "./dist/components/page-header.js"
+    },
     "./pagination": {
       "types": "./dist/components/pagination.d.ts",
       "import": "./dist/components/pagination.js"
+    },
+    "./password-input": {
+      "types": "./dist/components/password-input.d.ts",
+      "import": "./dist/components/password-input.js"
     },
     "./popover": {
       "types": "./dist/components/popover.d.ts",
@@ -169,6 +269,10 @@
       "types": "./dist/components/separator.d.ts",
       "import": "./dist/components/separator.js"
     },
+    "./settings-layout": {
+      "types": "./dist/components/settings-layout.d.ts",
+      "import": "./dist/components/settings-layout.js"
+    },
     "./settings-section": {
       "types": "./dist/components/settings-section.d.ts",
       "import": "./dist/components/settings-section.js"
@@ -176,6 +280,10 @@
     "./sheet": {
       "types": "./dist/components/sheet.d.ts",
       "import": "./dist/components/sheet.js"
+    },
+    "./sidebar-nav": {
+      "types": "./dist/components/sidebar-nav.d.ts",
+      "import": "./dist/components/sidebar-nav.js"
     },
     "./skeleton": {
       "types": "./dist/components/skeleton.d.ts",
@@ -197,9 +305,21 @@
       "types": "./dist/components/stat.d.ts",
       "import": "./dist/components/stat.js"
     },
+    "./status-dot": {
+      "types": "./dist/components/status-dot.d.ts",
+      "import": "./dist/components/status-dot.js"
+    },
+    "./stepper": {
+      "types": "./dist/components/stepper.d.ts",
+      "import": "./dist/components/stepper.js"
+    },
     "./switch": {
       "types": "./dist/components/switch.d.ts",
       "import": "./dist/components/switch.js"
+    },
+    "./table-toolbar": {
+      "types": "./dist/components/table-toolbar.d.ts",
+      "import": "./dist/components/table-toolbar.js"
     },
     "./tabs": {
       "types": "./dist/components/tabs.d.ts",
@@ -213,6 +333,10 @@
       "types": "./dist/components/textarea.d.ts",
       "import": "./dist/components/textarea.js"
     },
+    "./timeline": {
+      "types": "./dist/components/timeline.d.ts",
+      "import": "./dist/components/timeline.js"
+    },
     "./toast": {
       "types": "./dist/components/toast.d.ts",
       "import": "./dist/components/toast.js"
@@ -221,22 +345,31 @@
       "types": "./dist/components/toggle.d.ts",
       "import": "./dist/components/toggle.js"
     },
+    "./toolbar": {
+      "types": "./dist/components/toolbar.d.ts",
+      "import": "./dist/components/toolbar.js"
+    },
     "./tooltip": {
       "types": "./dist/components/tooltip.d.ts",
       "import": "./dist/components/tooltip.js"
+    },
+    "./top-nav": {
+      "types": "./dist/components/top-nav.d.ts",
+      "import": "./dist/components/top-nav.js"
     },
     "./package.json": "./package.json"
   },
   "scripts": {
     "build:js": "tsup",
     "build:styles": "tailwindcss -i ./src/styles/styles.css -o ./dist/styles.css --minify && cp ./src/styles/reset.css ./dist/reset.css",
-    "build": "npm run build:js && npm run build:styles",
+    "build": "npm run build:js && npm run build:types && npm run build:styles",
     "dev": "tsup --watch --ignore-watch playground --ignore-watch \"**/.next/**\"",
     "dev:playground": "npm --prefix ./playground run dev",
     "prepublishOnly": "npm run build",
     "test": "vitest run",
     "test:watch": "vitest",
-    "lint": "eslint"
+    "lint": "eslint",
+    "build:types": "node ./scripts/generate-types.mjs"
   },
   "peerDependencies": {
     "react": "^18.2.0 || ^19.0.0",

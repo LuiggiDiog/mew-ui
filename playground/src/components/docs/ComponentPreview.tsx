@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import { SHOWCASE_COMPONENTS } from "../../lib/showcase/component-registry";
 
 const categoryPreviews = {
+  foundations: dynamic(() => import("./previews/FoundationsPreview")),
   actions: dynamic(() => import("./previews/ActionsPreview")),
   forms: dynamic(() => import("./previews/FormsPreview")),
   navigation: dynamic(() => import("./previews/NavigationPreview")),
@@ -11,6 +12,7 @@ const categoryPreviews = {
   overlays: dynamic(() => import("./previews/OverlaysPreview")),
   layout: dynamic(() => import("./previews/LayoutPreview")),
   "data-display": dynamic(() => import("./previews/DataDisplayPreview")),
+  patterns: dynamic(() => import("./previews/PatternsPreview")),
 };
 
 type PropsT = {

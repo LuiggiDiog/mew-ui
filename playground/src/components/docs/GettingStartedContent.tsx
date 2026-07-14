@@ -3,16 +3,27 @@ import { DocsSidebar } from "./DocsSidebar";
 
 const installSnippet = `npm install @luiggidiog/mew-ui`;
 
-const setupSnippet = `import "@luiggidiog/mew-ui/styles.css";`;
+const setupSnippet = `/* app/globals.css or src/main.css */
+@import "@luiggidiog/mew-ui/styles.css";
 
-const usageSnippet = `import { Button, Input } from "@luiggidiog/mew-ui";
+/* Optional */
+@import "@luiggidiog/mew-ui/reset.css";`;
+
+const themeSnippet = `<html data-mew-theme="system">
+<html data-mew-theme="dark">
+<html data-mew-theme="light">`;
+
+const usageSnippet = `import { AppShell, Button, Input, PageHeader } from "@luiggidiog/mew-ui";
 
 export function Example() {
   return (
-    <div className="space-y-3">
-      <Input label="Email" placeholder="you@example.com" />
-      <Button>Continue</Button>
-    </div>
+    <AppShell>
+      <div className="space-y-4 p-4">
+        <PageHeader title="Welcome" description="Create your first screen." />
+        <Input label="Email" placeholder="you@example.com" />
+        <Button>Continue</Button>
+      </div>
+    </AppShell>
   );
 }`;
 
@@ -20,7 +31,8 @@ const sections = [
   { id: "principles", label: "Design principles" },
   { id: "install", label: "Install" },
   { id: "styles", label: "Styles" },
-  { id: "first-component", label: "First component" },
+  { id: "themes", label: "Themes" },
+  { id: "first-component", label: "First screen" },
 ];
 
 export function GettingStartedContent() {
@@ -32,7 +44,7 @@ export function GettingStartedContent() {
         <header className="space-y-2">
           <h1 className="m-0 text-2xl font-semibold text-text-primary">Getting started</h1>
           <p className="m-0 text-sm text-text-secondary">
-            Minimal setup and core principles to keep a calm, readable, and consistent Mew UI implementation.
+            Minimal setup for Next, Vite, and any React app: install, import one stylesheet, choose a theme, and compose screens.
           </p>
         </header>
 
@@ -42,7 +54,7 @@ export function GettingStartedContent() {
             <li>Keep one primary action per section.</li>
             <li>Prefer spacing, contrast, and borders before heavy effects.</li>
             <li>Use token-driven styles and avoid hardcoded visual values.</li>
-            <li>Keep interactions immediate, clear, and predictable.</li>
+            <li>Keep cat references subtle, optional, and secondary to usability.</li>
           </ul>
         </section>
 
@@ -53,11 +65,18 @@ export function GettingStartedContent() {
 
         <section id="styles" className="scroll-mt-24 space-y-3 rounded-xl border border-border bg-surface p-5">
           <h2 className="m-0 text-base font-semibold text-text-primary">Import styles</h2>
-          <CodeBlock language="tsx" code={setupSnippet} />
+          <p className="m-0 text-sm text-text-secondary">Use the same import in Next globals or Vite entry CSS.</p>
+          <CodeBlock language="css" code={setupSnippet} />
+        </section>
+
+        <section id="themes" className="scroll-mt-24 space-y-3 rounded-xl border border-border bg-surface p-5">
+          <h2 className="m-0 text-base font-semibold text-text-primary">Themes</h2>
+          <p className="m-0 text-sm text-text-secondary">No provider is required. Use CSS variables through a data attribute.</p>
+          <CodeBlock language="html" code={themeSnippet} />
         </section>
 
         <section id="first-component" className="scroll-mt-24 space-y-3 rounded-xl border border-border bg-surface p-5">
-          <h2 className="m-0 text-base font-semibold text-text-primary">First component</h2>
+          <h2 className="m-0 text-base font-semibold text-text-primary">First screen</h2>
           <CodeBlock language="tsx" code={usageSnippet} />
         </section>
       </div>

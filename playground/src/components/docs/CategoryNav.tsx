@@ -23,6 +23,9 @@ export function CategoryNav({ active }: PropsT) {
       <Link href="/components" className={getItemClassName(active === "all")}>
         All
       </Link>
+      <Link href="/build-an-app" className={getItemClassName(active === "build-an-app")}>
+        Build an app
+      </Link>
       {CATEGORIES.map((category) => (
         <Link
           key={category.key}
