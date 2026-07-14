@@ -35,7 +35,7 @@ export function CodeBlock({ code, language, showCopy = true, className, ...props
             <button
               type="button"
               onClick={handleCopy}
-              className="ml-auto inline-flex items-center gap-1.5 rounded-lg bg-transparent px-2 py-1 text-xs text-text-secondary transition-colors hover:bg-surface-elevated hover:text-text-primary"
+              className="ml-auto inline-flex h-8 appearance-none items-center gap-1.5 rounded-lg bg-transparent px-2.5 text-xs text-text-secondary shadow-none transition-colors hover:bg-surface-elevated hover:text-text-primary"
               aria-label={copied ? "Copied" : "Copy code"}
             >
               {copied ? (

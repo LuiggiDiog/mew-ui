@@ -45,7 +45,7 @@ export function Toaster() {
             )}
           </div>
           <ToastPrimitive.Close
-            className="shrink-0 rounded-lg bg-transparent p-0.5 text-text-secondary/70 transition-colors hover:bg-surface-elevated hover:text-text-primary"
+            className="inline-flex h-7 w-7 shrink-0 appearance-none items-center justify-center rounded-full bg-transparent p-0 text-text-secondary/70 shadow-none transition-colors hover:bg-surface-elevated hover:text-text-primary"
             aria-label="Close"
           >
             <XIcon className="w-4 h-4" />

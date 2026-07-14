@@ -30,7 +30,7 @@ export function Tag({ variant = "default", onRemove, className, children }: TagP
         <button
           type="button"
           onClick={onRemove}
-          className="ml-0.5 rounded-full bg-transparent p-0.5 opacity-70 transition-opacity hover:bg-surface hover:opacity-100 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent"
+          className="ml-0.5 inline-flex h-5 w-5 appearance-none items-center justify-center rounded-full bg-transparent p-0 opacity-70 shadow-none transition-opacity hover:bg-surface hover:opacity-100 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent"
           aria-label="Remove"
         >
           <XIcon className="w-3 h-3" />

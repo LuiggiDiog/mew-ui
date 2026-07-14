@@ -46,7 +46,7 @@ export function PaginationButton({ isActive, disabled, className, children, ...p
       disabled={disabled}
       aria-current={isActive ? "page" : undefined}
       className={cn(
-        "inline-flex h-8 min-w-[2rem] items-center justify-center rounded-lg border px-2 text-sm font-medium transition-colors",
+        "inline-flex h-8 min-w-[2rem] appearance-none items-center justify-center rounded-lg border px-2 text-sm font-medium shadow-none transition-colors",
         "disabled:opacity-40 disabled:cursor-not-allowed",
         isActive
           ? "border-accent bg-accent text-white"
