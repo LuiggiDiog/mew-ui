@@ -1,4 +1,6 @@
-import * as ScrollAreaPrimitive from "@radix-ui/react-scroll-area";
+"use client";
+
+import { ScrollArea as ScrollAreaPrimitive } from "radix-ui";
 import { cn } from "@mew/ui/utils/cn";
 import type { ReactNode } from "react";
 

@@ -64,7 +64,7 @@ export function ImageLightbox(props: PropsT) {
                 downloadImage(src, downloadFileName);
               }}
               className={cn(
-                "inline-flex h-9 w-9 items-center justify-center rounded-lg",
+                "inline-flex h-9 w-9 appearance-none items-center justify-center rounded-lg border border-transparent shadow-none",
                 "bg-white/10 text-white backdrop-blur-sm transition-colors hover:bg-white/20 outline-none"
               )}
               aria-label="Download image"
@@ -79,7 +79,7 @@ export function ImageLightbox(props: PropsT) {
               onOpenChange(false);
             }}
             className={cn(
-              "inline-flex h-9 w-9 items-center justify-center rounded-lg",
+              "inline-flex h-9 w-9 appearance-none items-center justify-center rounded-lg border border-transparent shadow-none",
               "bg-white/10 text-white backdrop-blur-sm transition-colors hover:bg-white/20 outline-none"
             )}
             aria-label="Close"
@@ -93,7 +93,6 @@ export function ImageLightbox(props: PropsT) {
           className="relative max-w-[90vw] max-h-[90vh]"
           onClick={(e) => e.stopPropagation()}
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={src}
             alt={alt}

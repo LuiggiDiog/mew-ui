@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import type { InputHTMLAttributes } from "react";
 import { cn } from "@mew/ui/utils/cn";
 import { SearchIcon, XIcon } from "@mew/ui/icons";
@@ -30,10 +29,10 @@ export function SearchInput({ value, onChange, onClear, className, ...props }: S
         <button
           type="button"
           onClick={onClear}
-          className="absolute right-3 rounded-full p-0.5 text-text-secondary hover:text-text-primary transition-colors"
+          className="absolute right-2.5 inline-flex h-7 w-7 appearance-none items-center justify-center rounded-full bg-transparent p-0 text-text-secondary shadow-none transition-colors hover:bg-surface-elevated hover:text-text-primary"
           aria-label="Clear search"
         >
-          <XIcon className="w-3.5 h-3.5" />
+          <XIcon className="h-4 w-4" />
         </button>
       )}
     </div>

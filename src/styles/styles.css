@@ -1,0 +1,185 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@source "../components/**/*.tsx";
+@source "../icons/**/*.tsx";
+
+:root,
+[data-mew-theme="dark"] {
+  color-scheme: dark;
+  --mew-color-background: #09090b;
+  --mew-color-surface: #18181b;
+  --mew-color-surface-elevated: #27272a;
+  --mew-color-border: #3f3f46;
+  --mew-color-text-primary: #fafafa;
+  --mew-color-text-secondary: #a1a1aa;
+  --mew-color-accent: #5f62ef;
+  --mew-color-accent-hover: #4f46e5;
+  --mew-color-accent-subtle: #5f62ef1a;
+  --mew-color-success: #10b981;
+  --mew-color-error: #ef4444;
+  --mew-color-warning: #f59e0b;
+  --mew-font-sans: system-ui, sans-serif;
+  --mew-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --mew-radius-sm: 0.375rem;
+  --mew-radius-md: 0.625rem;
+  --mew-radius-lg: 0.875rem;
+  --mew-radius-xl: 1rem;
+  --mew-radius-full: 9999px;
+  --mew-space-xs: 0.25rem;
+  --mew-space-sm: 0.5rem;
+  --mew-space-md: 0.75rem;
+  --mew-space-lg: 1rem;
+  --mew-space-xl: 1.5rem;
+  --mew-space-2xl: 2rem;
+  --mew-z-dropdown: 20;
+  --mew-z-overlay: 40;
+  --mew-z-modal: 50;
+  --mew-motion-fast: 120ms;
+  --mew-motion-normal: 200ms;
+}
+
+[data-mew-theme="light"] {
+  color-scheme: light;
+  --mew-color-background: #f9fafb;
+  --mew-color-surface: #ffffff;
+  --mew-color-surface-elevated: #f3f4f6;
+  --mew-color-border: #e5e7eb;
+  --mew-color-text-primary: #111827;
+  --mew-color-text-secondary: #4b5563;
+  --mew-color-accent: #2563eb;
+  --mew-color-accent-hover: #1d4ed8;
+  --mew-color-accent-subtle: #2563eb1a;
+  --mew-color-success: #16a34a;
+  --mew-color-error: #dc2626;
+  --mew-color-warning: #d97706;
+}
+
+[data-mew-theme="system"] {
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: light) {
+  [data-mew-theme="system"] {
+    --mew-color-background: #f9fafb;
+    --mew-color-surface: #ffffff;
+    --mew-color-surface-elevated: #f3f4f6;
+    --mew-color-border: #e5e7eb;
+    --mew-color-text-primary: #111827;
+    --mew-color-text-secondary: #4b5563;
+    --mew-color-accent: #2563eb;
+    --mew-color-accent-hover: #1d4ed8;
+    --mew-color-accent-subtle: #2563eb1a;
+    --mew-color-success: #16a34a;
+    --mew-color-error: #dc2626;
+    --mew-color-warning: #d97706;
+  }
+}
+
+@theme {
+  --color-background: var(--mew-color-background);
+  --color-surface: var(--mew-color-surface);
+  --color-surface-elevated: var(--mew-color-surface-elevated);
+  --color-border: var(--mew-color-border);
+  --color-text-primary: var(--mew-color-text-primary);
+  --color-text-secondary: var(--mew-color-text-secondary);
+  --color-accent: var(--mew-color-accent);
+  --color-accent-hover: var(--mew-color-accent-hover);
+  --color-accent-subtle: var(--mew-color-accent-subtle);
+  --color-success: var(--mew-color-success);
+  --color-error: var(--mew-color-error);
+  --color-warning: var(--mew-color-warning);
+  --font-sans: var(--mew-font-sans);
+  --font-mono: var(--mew-font-mono);
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    color: inherit;
+    font: inherit;
+  }
+
+  button,
+  select {
+    text-transform: none;
+  }
+
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+    appearance: none;
+    border: 0 solid transparent;
+    background-color: transparent;
+    background-image: none;
+  }
+
+  button:disabled,
+  [type="button"]:disabled,
+  [type="reset"]:disabled,
+  [type="submit"]:disabled {
+    cursor: not-allowed;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--mew-color-accent, #5f62ef);
+    outline-offset: 2px;
+  }
+}
+
+@theme inline {
+  --animate-mew-shimmer: mew-shimmer 2s ease-in-out infinite;
+  --animate-mew-breathe: mew-breathe 2s ease-in-out infinite;
+  --animate-spin: mew-spin 0.8s linear infinite;
+  --animate-mew-spin: mew-spin 0.8s linear infinite;
+}
+
+@keyframes mew-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes mew-breathe {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+@keyframes mew-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes mew-fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes mew-fade-out { from { opacity: 1; } to { opacity: 0; } }
+@keyframes mew-fade-out-80 { from { opacity: 1; } to { opacity: 0.2; } }
+@keyframes mew-zoom-in-95 { from { transform: scale(0.95); } to { transform: scale(1); } }
+@keyframes mew-zoom-out-95 { from { transform: scale(1); } to { transform: scale(0.95); } }
+@keyframes mew-slide-in-from-top { from { transform: translateY(-100%); } to { transform: translateY(0); } }
+@keyframes mew-slide-out-to-top { from { transform: translateY(0); } to { transform: translateY(-100%); } }
+@keyframes mew-slide-in-from-bottom { from { transform: translateY(100%); } to { transform: translateY(0); } }
+@keyframes mew-slide-out-to-bottom { from { transform: translateY(0); } to { transform: translateY(100%); } }
+@keyframes mew-slide-in-from-right { from { transform: translateX(100%); } to { transform: translateX(0); } }
+@keyframes mew-slide-out-to-right { from { transform: translateX(0); } to { transform: translateX(100%); } }
+@keyframes mew-slide-in-from-left { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+@keyframes mew-slide-out-to-left { from { transform: translateX(0); } to { transform: translateX(-100%); } }
+@keyframes mew-slide-in-from-top-full { from { transform: translateY(-100%); } to { transform: translateY(0); } }
+
+@utility animate-shimmer {
+  background: linear-gradient(110deg, var(--mew-color-surface) 30%, var(--mew-color-accent-subtle) 50%, var(--mew-color-surface) 70%);
+  background-size: 200% 100%;
+  animation: var(--animate-mew-shimmer);
+}
+
+@utility animate-breathe { animation: var(--animate-mew-breathe); }
+@utility animate-spin { animation: var(--animate-mew-spin); }

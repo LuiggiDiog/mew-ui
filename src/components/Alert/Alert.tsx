@@ -31,8 +31,8 @@ interface AlertProps extends HTMLAttributes<HTMLDivElement> {
   icon?: ReactNode;
 }
 
-interface AlertTitleProps extends HTMLAttributes<HTMLParagraphElement> {}
-interface AlertDescriptionProps extends HTMLAttributes<HTMLParagraphElement> {}
+type AlertTitleProps = HTMLAttributes<HTMLParagraphElement>;
+type AlertDescriptionProps = HTMLAttributes<HTMLParagraphElement>;
 
 export function Alert({ variant = "default", icon, className, children, ...props }: AlertProps) {
   const iconEl = icon !== undefined ? icon : defaultIcons[variant];
@@ -57,7 +57,7 @@ export function Alert({ variant = "default", icon, className, children, ...props
 
 export function AlertTitle({ className, children, ...props }: AlertTitleProps) {
   return (
-    <p className={cn("text-sm font-medium leading-none", className)} {...props}>
+    <p className={cn("m-0 text-sm font-medium leading-none", className)} {...props}>
       {children}
     </p>
   );
@@ -65,7 +65,7 @@ export function AlertTitle({ className, children, ...props }: AlertTitleProps) {
 
 export function AlertDescription({ className, children, ...props }: AlertDescriptionProps) {
   return (
-    <p className={cn("mt-1 text-sm text-text-secondary", className)} {...props}>
+    <p className={cn("m-0 mt-1 text-sm text-text-secondary", className)} {...props}>
       {children}
     </p>
   );

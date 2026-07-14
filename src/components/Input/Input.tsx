@@ -73,13 +73,13 @@ export function Input(props: PropsT) {
       {input}
 
       {description && (
-        <p id={descriptionId} className="text-xs text-text-secondary">
+        <p id={descriptionId} className="m-0 text-xs text-text-secondary">
           {description}
         </p>
       )}
 
       {error && (
-        <p id={errorId} role="alert" className="text-xs text-error">
+        <p id={errorId} role="alert" className="m-0 text-xs text-error">
           {error}
         </p>
       )}

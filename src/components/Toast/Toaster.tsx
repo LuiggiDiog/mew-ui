@@ -1,6 +1,6 @@
 "use client";
 
-import * as ToastPrimitive from "@radix-ui/react-toast";
+import { Toast as ToastPrimitive } from "radix-ui";
 import { cn } from "@mew/ui/utils/cn";
 import { XIcon } from "@mew/ui/icons";
 import { useToast } from "./useToast";
@@ -45,7 +45,7 @@ export function Toaster() {
             )}
           </div>
           <ToastPrimitive.Close
-            className="shrink-0 rounded-lg p-0.5 text-text-secondary/60 hover:text-text-primary transition-colors"
+            className="inline-flex h-7 w-7 shrink-0 appearance-none items-center justify-center rounded-full bg-transparent p-0 text-text-secondary/70 shadow-none transition-colors hover:bg-surface-elevated hover:text-text-primary"
             aria-label="Close"
           >
             <XIcon className="w-4 h-4" />

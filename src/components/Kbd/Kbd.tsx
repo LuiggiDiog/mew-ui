@@ -1,7 +1,7 @@
 import { cn } from "@mew/ui/utils/cn";
 import type { HTMLAttributes } from "react";
 
-interface KbdProps extends HTMLAttributes<HTMLElement> {}
+type KbdProps = HTMLAttributes<HTMLElement>;
 
 export function Kbd({ className, children, ...props }: KbdProps) {
   return (

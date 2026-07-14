@@ -2,9 +2,9 @@ import type { HTMLAttributes } from "react";
 import { cn } from "@mew/ui/utils/cn";
 import { percentageDiff } from "@mew/ui/utils";
 
-interface StatProps extends HTMLAttributes<HTMLDivElement> {}
-interface StatLabelProps extends HTMLAttributes<HTMLParagraphElement> {}
-interface StatValueProps extends HTMLAttributes<HTMLParagraphElement> {}
+type StatProps = HTMLAttributes<HTMLDivElement>;
+type StatLabelProps = HTMLAttributes<HTMLParagraphElement>;
+type StatValueProps = HTMLAttributes<HTMLParagraphElement>;
 
 interface StatDeltaProps extends HTMLAttributes<HTMLSpanElement> {
   current: number;
@@ -21,7 +21,7 @@ export function Stat({ className, children, ...props }: StatProps) {
 
 export function StatLabel({ className, children, ...props }: StatLabelProps) {
   return (
-    <p className={cn("text-xs font-medium uppercase tracking-wide text-text-secondary", className)} {...props}>
+    <p className={cn("m-0 text-xs font-medium uppercase tracking-wide text-text-secondary", className)} {...props}>
       {children}
     </p>
   );
@@ -29,7 +29,7 @@ export function StatLabel({ className, children, ...props }: StatLabelProps) {
 
 export function StatValue({ className, children, ...props }: StatValueProps) {
   return (
-    <p className={cn("text-2xl font-semibold text-text-primary", className)} {...props}>
+    <p className={cn("m-0 text-2xl font-semibold text-text-primary", className)} {...props}>
       {children}
     </p>
   );

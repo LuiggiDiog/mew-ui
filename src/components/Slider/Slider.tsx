@@ -1,4 +1,6 @@
-import * as SliderPrimitive from "@radix-ui/react-slider";
+"use client";
+
+import { Slider as SliderPrimitive } from "radix-ui";
 import { cn } from "@mew/ui/utils/cn";
 
 interface SliderProps {

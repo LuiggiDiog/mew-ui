@@ -5,7 +5,24 @@ import reactHooksPlugin from "eslint-plugin-react-hooks";
 import globals from "globals";
 
 export default [
+  {
+    ignores: [
+      "dist/**",
+      "node_modules/**",
+      "playground/.next/**",
+      ".vercel/**",
+      "playground/.vercel/**",
+    ],
+  },
   js.configs.recommended,
+  {
+    files: ["**/*.mjs"],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+      },
+    },
+  },
   ...tseslint.configs.recommended,
   {
     files: ["**/*.{ts,tsx}"],
@@ -13,10 +30,6 @@ export default [
       ecmaVersion: 2022,
       sourceType: "module",
       parser: tseslint.parser,
-      parserOptions: {
-        project: "./tsconfig.json",
-        tsconfigRootDir: import.meta.dirname,
-      },
       globals: {
         ...globals.browser,
         ...globals.node,

@@ -28,6 +28,12 @@
       ],
       "@mew/ui/*": [
         "../src/*"
+      ],
+      "@luiggidiog/mew-ui": [
+        "../src/index.ts"
+      ],
+      "@luiggidiog/mew-ui/*": [
+        "../src/*"
       ]
     }
   },

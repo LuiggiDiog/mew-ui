@@ -18,33 +18,113 @@ export type ShowcaseComponentT = {
 
 export const SHOWCASE_COMPONENTS: ShowcaseComponentT[] = [
   {
+    name: "AppShell",
+    category: "foundations",
+    description: "Application frame with header, sidebar, content, and footer.",
+    whenToUse: "Use as the outer structure for product screens.",
+    snippet: "import { AppShell } from \"@luiggidiog/mew-ui\";\n\n<AppShell header={<Header />} sidebar={<Nav />}>Content</AppShell>;",
+    variations: [{"title":"With footer","code":"// With footer variation"}],
+    compositionExports: ["AppShell"],
+    preview: true,
+  },
+  {
+    name: "PageHeader",
+    category: "foundations",
+    description: "Page title block with description, metadata, and actions.",
+    whenToUse: "Use at the top of detail, index, and dashboard pages.",
+    snippet: "import { PageHeader } from \"@luiggidiog/mew-ui\";\n\n<PageHeader title=\"Projects\" description=\"Manage work\" />;",
+    variations: [{"title":"With actions","code":"// With actions variation"}],
+    compositionExports: ["PageHeader"],
+    preview: true,
+  },
+  {
+    name: "SidebarNav",
+    category: "foundations",
+    description: "Compact side navigation list with active state.",
+    whenToUse: "Use for section or app navigation.",
+    snippet: "import { SidebarNav } from \"@luiggidiog/mew-ui\";\n\n<SidebarNav items={[{ label: \"Home\", href: \"/\", active: true }]} />;",
+    variations: [{"title":"Button items","code":"// Button items variation"}],
+    compositionExports: ["SidebarNav"],
+    preview: true,
+  },
+  {
+    name: "TopNav",
+    category: "foundations",
+    description: "Horizontal navigation bar for product chrome.",
+    whenToUse: "Use for top-level app navigation.",
+    snippet: "import { TopNav } from \"@luiggidiog/mew-ui\";\n\n<TopNav brand=\"Mew\" items={items} />;",
+    variations: [{"title":"With actions","code":"// With actions variation"}],
+    compositionExports: ["TopNav"],
+    preview: true,
+  },
+  {
+    name: "Toolbar",
+    category: "foundations",
+    description: "Flexible bar for search, filters, and actions.",
+    whenToUse: "Use above lists, tables, and index pages.",
+    snippet: "import { Toolbar } from \"@luiggidiog/mew-ui\";\n\n<Toolbar search={<Search />} actions={<Button>New</Button>} />;",
+    variations: [{"title":"With filters","code":"// With filters variation"}],
+    compositionExports: ["Toolbar"],
+    preview: true,
+  },
+  {
     name: "Button",
     category: "actions",
     description: "Primary and secondary action trigger.",
     whenToUse: "Use for explicit user actions like save, submit, retry, or open.",
-    snippet: `import { Button } from "@mew/ui";
-
-<Button>Save changes</Button>;`,
-    variations: [
-      { title: "Ghost", code: `<Button variant="ghost">Skip</Button>;` },
-      { title: "Outline", code: `<Button variant="outline">Cancel</Button>;` },
-    ],
+    snippet: "import { Button } from \"@luiggidiog/mew-ui\";\n\n<Button>Save changes</Button>;",
+    variations: [{"title":"Ghost","code":"// Ghost variation"},{"title":"Outline","code":"// Outline variation"}],
     compositionExports: ["Button"],
     preview: true,
   },
   {
-    name: "Badge",
-    category: "feedback",
-    description: "Compact status label for metadata and state.",
-    whenToUse: "Use next to concise status information.",
-    snippet: `import { Badge } from "@mew/ui";
-
-<Badge variant="success">Connected</Badge>;`,
-    variations: [
-      { title: "Warning", code: `<Badge variant="warning">Pending</Badge>;` },
-      { title: "Error", code: `<Badge variant="error">Failed</Badge>;` },
-    ],
-    compositionExports: ["Badge"],
+    name: "IconButton",
+    category: "actions",
+    description: "Accessible icon-only button.",
+    whenToUse: "Use for compact actions where the icon is visually enough but a label is still required.",
+    snippet: "import { IconButton, XIcon } from \"@luiggidiog/mew-ui\";\n\n<IconButton label=\"Close\"><XIcon /></IconButton>;",
+    variations: [{"title":"Primary","code":"// Primary variation"}],
+    compositionExports: ["IconButton"],
+    preview: true,
+  },
+  {
+    name: "ButtonGroup",
+    category: "actions",
+    description: "Grouped action controls with shared border.",
+    whenToUse: "Use for related choices or segmented actions.",
+    snippet: "import { ButtonGroup, Button } from \"@luiggidiog/mew-ui\";\n\n<ButtonGroup><Button>One</Button><Button>Two</Button></ButtonGroup>;",
+    variations: [{"title":"Vertical","code":"// Vertical variation"}],
+    compositionExports: ["ButtonGroup"],
+    preview: true,
+  },
+  {
+    name: "LinkButton",
+    category: "actions",
+    description: "Link with button affordance.",
+    whenToUse: "Use for navigation that should read visually as an action.",
+    snippet: "import { LinkButton } from \"@luiggidiog/mew-ui\";\n\n<LinkButton href=\"/docs\">Read docs</LinkButton>;",
+    variations: [{"title":"Primary","code":"// Primary variation"}],
+    compositionExports: ["LinkButton"],
+    preview: true,
+  },
+  {
+    name: "ConfirmAction",
+    category: "actions",
+    description: "Button that opens a confirmation dialog before running.",
+    whenToUse: "Use for destructive or expensive actions.",
+    snippet: "import { ConfirmAction } from \"@luiggidiog/mew-ui\";\n\n<ConfirmAction label=\"Delete\" title=\"Delete?\" onConfirm={remove} />;",
+    variations: [{"title":"Destructive","code":"// Destructive variation"}],
+    compositionExports: ["ConfirmAction"],
+    preview: true,
+  },
+  {
+    name: "CopyButton",
+    category: "actions",
+    description: "Reusable copy-to-clipboard action.",
+    whenToUse: "Use next to IDs, snippets, tokens, and URLs.",
+    snippet: "import { CopyButton } from \"@luiggidiog/mew-ui\";\n\n<CopyButton text=\"npm install\" />;",
+    variations: [{"title":"Custom label","code":"// Custom label variation"}],
+    compositionExports: ["CopyButton"],
     preview: true,
   },
   {
@@ -52,13 +132,8 @@ export const SHOWCASE_COMPONENTS: ShowcaseComponentT[] = [
     category: "forms",
     description: "Single-line text input with label and helper states.",
     whenToUse: "Use for short typed values such as name, email, or URL.",
-    snippet: `import { Input } from "@mew/ui";
-
-<Input label="Email" placeholder="you@example.com" />;`,
-    variations: [
-      { title: "Error", code: `<Input label="Email" error="Email is required" />;` },
-      { title: "Small", code: `<Input size="sm" placeholder="Compact" />;` },
-    ],
+    snippet: "import { Input } from \"@luiggidiog/mew-ui\";\n\n<Input label=\"Email\" placeholder=\"you@example.com\" />;",
+    variations: [{"title":"Error","code":"// Error variation"},{"title":"Small","code":"// Small variation"}],
     compositionExports: ["Input"],
     preview: true,
   },
@@ -67,12 +142,89 @@ export const SHOWCASE_COMPONENTS: ShowcaseComponentT[] = [
     category: "forms",
     description: "Multi-line text input with optional auto resize.",
     whenToUse: "Use for messages, notes, prompts, and rich text-like input.",
-    snippet: `import { Textarea } from "@mew/ui";
-
-<Textarea label="Message" placeholder="Write your message" />;`,
-    variations: [
-      { title: "Fixed height", code: `<Textarea autoResize={false} />;` }],
+    snippet: "import { Textarea } from \"@luiggidiog/mew-ui\";\n\n<Textarea label=\"Message\" />;",
+    variations: [{"title":"Fixed height","code":"// Fixed height variation"}],
     compositionExports: ["Textarea"],
+    preview: true,
+  },
+  {
+    name: "NumberInput",
+    category: "forms",
+    description: "Numeric input with Mew field styling.",
+    whenToUse: "Use for counts, limits, thresholds, and amounts.",
+    snippet: "import { NumberInput } from \"@luiggidiog/mew-ui\";\n\n<NumberInput label=\"Seats\" min={1} />;",
+    variations: [{"title":"Error","code":"// Error variation"}],
+    compositionExports: ["NumberInput"],
+    preview: true,
+  },
+  {
+    name: "PasswordInput",
+    category: "forms",
+    description: "Password input with show/hide control.",
+    whenToUse: "Use for credentials and secret-like values.",
+    snippet: "import { PasswordInput } from \"@luiggidiog/mew-ui\";\n\n<PasswordInput label=\"Password\" />;",
+    variations: [{"title":"With description","code":"// With description variation"}],
+    compositionExports: ["PasswordInput"],
+    preview: true,
+  },
+  {
+    name: "DateInput",
+    category: "forms",
+    description: "Native date input styled with Mew tokens.",
+    whenToUse: "Use when a lightweight date field is enough.",
+    snippet: "import { DateInput } from \"@luiggidiog/mew-ui\";\n\n<DateInput label=\"Due date\" />;",
+    variations: [{"title":"With min","code":"// With min variation"}],
+    compositionExports: ["DateInput"],
+    preview: true,
+  },
+  {
+    name: "FileUpload",
+    category: "forms",
+    description: "Simple file upload drop target.",
+    whenToUse: "Use for lightweight upload flows without a custom uploader.",
+    snippet: "import { FileUpload } from \"@luiggidiog/mew-ui\";\n\n<FileUpload label=\"Upload file\" />;",
+    variations: [{"title":"Accept images","code":"// Accept images variation"}],
+    compositionExports: ["FileUpload"],
+    preview: true,
+  },
+  {
+    name: "Fieldset",
+    category: "forms",
+    description: "Semantic group for related form controls.",
+    whenToUse: "Use to group fields under a shared legend.",
+    snippet: "import { Fieldset } from \"@luiggidiog/mew-ui\";\n\n<Fieldset legend=\"Profile\">...</Fieldset>;",
+    variations: [{"title":"With error","code":"// With error variation"}],
+    compositionExports: ["Fieldset"],
+    preview: true,
+  },
+  {
+    name: "Combobox",
+    category: "forms",
+    description: "Searchable single-option picker.",
+    whenToUse: "Use when select options are too many for a basic select.",
+    snippet: "import { Combobox } from \"@luiggidiog/mew-ui\";\n\n<Combobox options={options} onValueChange={setValue} />;",
+    variations: [{"title":"Empty result","code":"// Empty result variation"}],
+    compositionExports: ["Combobox"],
+    preview: true,
+  },
+  {
+    name: "Command",
+    category: "forms",
+    description: "Command list with built-in filtering.",
+    whenToUse: "Use for command palettes and quick action lists.",
+    snippet: "import { Command } from \"@luiggidiog/mew-ui\";\n\n<Command items={items} onSelect={run} />;",
+    variations: [{"title":"With descriptions","code":"// With descriptions variation"}],
+    compositionExports: ["Command"],
+    preview: true,
+  },
+  {
+    name: "FilterBar",
+    category: "forms",
+    description: "Search, filter, and action row.",
+    whenToUse: "Use above collections that need quick filtering.",
+    snippet: "import { FilterBar } from \"@luiggidiog/mew-ui\";\n\n<FilterBar query={query} onQueryChange={setQuery} />;",
+    variations: [{"title":"With filters","code":"// With filters variation"}],
+    compositionExports: ["FilterBar"],
     preview: true,
   },
   {
@@ -80,16 +232,8 @@ export const SHOWCASE_COMPONENTS: ShowcaseComponentT[] = [
     category: "forms",
     description: "Controlled dropdown selector with grouped options.",
     whenToUse: "Use when users choose one option from a fixed set.",
-    snippet: `import { Select } from "@mew/ui";
-
-<Select
-  value={value}
-  onValueChange={setValue}
-  groups={[{ options: [{ label: "One", value: "one" }] }]}
-/>;`,
-    variations: [
-      { title: "With label", code: `<Select value={value} onValueChange={setValue} label="Model" groups={groups} />;` },
-    ],
+    snippet: "import { Select } from \"@luiggidiog/mew-ui\";\n\n<Select value={value} onValueChange={setValue} groups={groups} />;",
+    variations: [{"title":"With label","code":"// With label variation"}],
     compositionExports: ["Select"],
     preview: true,
   },
@@ -98,10 +242,8 @@ export const SHOWCASE_COMPONENTS: ShowcaseComponentT[] = [
     category: "forms",
     description: "Search-oriented input with clear affordance.",
     whenToUse: "Use for list filtering and command/search boxes.",
-    snippet: `import { SearchInput } from "@mew/ui";
-
-<SearchInput value={query} onChange={(e) => setQuery(e.target.value)} onClear={() => setQuery("")} />;`,
-    variations: [{ title: "Placeholder", code: `<SearchInput placeholder="Search components" />;` }],
+    snippet: "import { SearchInput } from \"@luiggidiog/mew-ui\";\n\n<SearchInput value={query} onChange={onChange} />;",
+    variations: [{"title":"Placeholder","code":"// Placeholder variation"}],
     compositionExports: ["SearchInput"],
     preview: true,
   },
@@ -109,25 +251,19 @@ export const SHOWCASE_COMPONENTS: ShowcaseComponentT[] = [
     name: "FormField",
     category: "forms",
     description: "Layout wrapper for label, control, hint, and error.",
-    whenToUse: "Use when composing custom form controls with consistent assistive text.",
-    snippet: `import { FormField, Input } from "@mew/ui";
-
-<FormField label="Workspace" htmlFor="workspace" hint="Lowercase only">
-  <Input id="workspace" />
-</FormField>;`,
-    variations: [{ title: "Error", code: `<FormField label="Name" error="Required">...</FormField>;` }],
-    compositionExports: ["FormField", "Label"],
+    whenToUse: "Use when composing custom controls with assistive text.",
+    snippet: "import { FormField, Input } from \"@luiggidiog/mew-ui\";\n\n<FormField label=\"Workspace\"><Input /></FormField>;",
+    variations: [{"title":"Error","code":"// Error variation"}],
+    compositionExports: ["FormField","Label"],
     preview: true,
   },
   {
     name: "Checkbox",
     category: "forms",
-    description: "Binary selection control for multiple-choice forms.",
+    description: "Binary selection control.",
     whenToUse: "Use for independent yes/no options.",
-    snippet: `import { Checkbox } from "@mew/ui";
-
-<Checkbox checked={checked} onCheckedChange={setChecked} />;`,
-    variations: [{ title: "Disabled", code: `<Checkbox disabled checked />;` }],
+    snippet: "import { Checkbox } from \"@luiggidiog/mew-ui\";\n\n<Checkbox checked={checked} onCheckedChange={setChecked} />;",
+    variations: [{"title":"Disabled","code":"// Disabled variation"}],
     compositionExports: ["Checkbox"],
     preview: true,
   },
@@ -136,11 +272,9 @@ export const SHOWCASE_COMPONENTS: ShowcaseComponentT[] = [
     category: "forms",
     description: "Immediate on/off control for settings.",
     whenToUse: "Use when changes apply instantly.",
-    snippet: `import { Switch } from "@mew/ui";
-
-<Switch checked={enabled} onCheckedChange={setEnabled} />;`,
-    variations: [{ title: "Disabled", code: `<Switch disabled checked />;` }],
-    compositionExports: ["Switch", "Toggle"],
+    snippet: "import { Switch } from \"@luiggidiog/mew-ui\";\n\n<Switch checked={enabled} onCheckedChange={setEnabled} />;",
+    variations: [{"title":"Disabled","code":"// Disabled variation"}],
+    compositionExports: ["Switch","Toggle"],
     preview: true,
   },
   {
@@ -148,26 +282,29 @@ export const SHOWCASE_COMPONENTS: ShowcaseComponentT[] = [
     category: "forms",
     description: "Single-choice selector from a small set.",
     whenToUse: "Use when only one value can be selected.",
-    snippet: `import { RadioGroup, RadioGroupItem } from "@mew/ui";
-
-<RadioGroup value={value} onValueChange={setValue}>
-  <RadioGroupItem value="a" />
-  <RadioGroupItem value="b" />
-</RadioGroup>;`,
-    variations: [{ title: "Disabled item", code: `<RadioGroupItem value="c" disabled />;` }],
-    compositionExports: ["RadioGroup", "RadioGroupItem"],
+    snippet: "import { RadioGroup, RadioGroupItem } from \"@luiggidiog/mew-ui\";\n\n<RadioGroup><RadioGroupItem value=\"a\" /></RadioGroup>;",
+    variations: [{"title":"Disabled item","code":"// Disabled item variation"}],
+    compositionExports: ["RadioGroup","RadioGroupItem"],
     preview: true,
   },
   {
     name: "Slider",
     category: "forms",
     description: "Range selector for numeric intervals.",
-    whenToUse: "Use for volume, thresholds, and tunable numeric values.",
-    snippet: `import { Slider } from "@mew/ui";
-
-<Slider value={value} onValueChange={setValue} max={100} />;`,
-    variations: [{ title: "With step", code: `<Slider step={5} />;` }],
+    whenToUse: "Use for tunable numeric values.",
+    snippet: "import { Slider } from \"@luiggidiog/mew-ui\";\n\n<Slider value={value} onValueChange={setValue} />;",
+    variations: [{"title":"With step","code":"// With step variation"}],
     compositionExports: ["Slider"],
+    preview: true,
+  },
+  {
+    name: "InlineEditor",
+    category: "forms",
+    description: "Inline edit surface with save/cancel behavior.",
+    whenToUse: "Use for quick edits without leaving context.",
+    snippet: "import { InlineEditor } from \"@luiggidiog/mew-ui\";\n\n<InlineEditor value={value} onChange={setValue} />;",
+    variations: [{"title":"Auto focus","code":"// Auto focus variation"}],
+    compositionExports: ["InlineEditor"],
     preview: true,
   },
   {
@@ -175,16 +312,9 @@ export const SHOWCASE_COMPONENTS: ShowcaseComponentT[] = [
     category: "navigation",
     description: "Progressive disclosure for grouped content.",
     whenToUse: "Use for FAQ, settings details, and collapsible sections.",
-    snippet: `import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@mew/ui";
-
-<Accordion type="single" collapsible>
-  <AccordionItem value="item-1">
-    <AccordionTrigger>Section</AccordionTrigger>
-    <AccordionContent>Content</AccordionContent>
-  </AccordionItem>
-</Accordion>;`,
-    variations: [{ title: "Multiple", code: `<Accordion type="multiple">...</Accordion>;` }],
-    compositionExports: ["Accordion", "AccordionItem", "AccordionTrigger", "AccordionContent"],
+    snippet: "import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from \"@luiggidiog/mew-ui\";\n\n<Accordion type=\"single\" collapsible>...</Accordion>;",
+    variations: [{"title":"Multiple","code":"// Multiple variation"}],
+    compositionExports: ["Accordion","AccordionItem","AccordionTrigger","AccordionContent"],
     preview: true,
   },
   {
@@ -192,18 +322,9 @@ export const SHOWCASE_COMPONENTS: ShowcaseComponentT[] = [
     category: "navigation",
     description: "Switch between related content views.",
     whenToUse: "Use when users alternate between peer panels.",
-    snippet: `import { Tabs, TabsList, TabsTrigger, TabsContent } from "@mew/ui";
-
-<Tabs defaultValue="preview">
-  <TabsList>
-    <TabsTrigger value="preview">Preview</TabsTrigger>
-    <TabsTrigger value="code">Code</TabsTrigger>
-  </TabsList>
-  <TabsContent value="preview">...</TabsContent>
-  <TabsContent value="code">...</TabsContent>
-</Tabs>;`,
-    variations: [{ title: "Vertical spacing", code: `<TabsContent className="mt-2">...</TabsContent>;` }],
-    compositionExports: ["Tabs", "TabsList", "TabsTrigger", "TabsContent"],
+    snippet: "import { Tabs, TabsList, TabsTrigger, TabsContent } from \"@luiggidiog/mew-ui\";\n\n<Tabs defaultValue=\"preview\">...</Tabs>;",
+    variations: [{"title":"Vertical spacing","code":"// Vertical spacing variation"}],
+    compositionExports: ["Tabs","TabsList","TabsTrigger","TabsContent"],
     preview: true,
   },
   {
@@ -211,17 +332,9 @@ export const SHOWCASE_COMPONENTS: ShowcaseComponentT[] = [
     category: "navigation",
     description: "Hierarchy path navigation.",
     whenToUse: "Use to show location in nested screens.",
-    snippet: `import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator } from "@mew/ui";
-
-<Breadcrumb>
-  <BreadcrumbList>
-    <BreadcrumbItem><BreadcrumbLink href="#">Home</BreadcrumbLink></BreadcrumbItem>
-    <BreadcrumbSeparator />
-    <BreadcrumbItem><BreadcrumbPage>Settings</BreadcrumbPage></BreadcrumbItem>
-  </BreadcrumbList>
-</Breadcrumb>;`,
-    variations: [{ title: "Three levels", code: `<Breadcrumb>...</Breadcrumb>;` }],
-    compositionExports: ["Breadcrumb", "BreadcrumbList", "BreadcrumbItem", "BreadcrumbLink", "BreadcrumbPage", "BreadcrumbSeparator"],
+    snippet: "import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator } from \"@luiggidiog/mew-ui\";\n\n<Breadcrumb>...</Breadcrumb>;",
+    variations: [{"title":"Three levels","code":"// Three levels variation"}],
+    compositionExports: ["Breadcrumb","BreadcrumbList","BreadcrumbItem","BreadcrumbLink","BreadcrumbPage","BreadcrumbSeparator"],
     preview: true,
   },
   {
@@ -229,17 +342,19 @@ export const SHOWCASE_COMPONENTS: ShowcaseComponentT[] = [
     category: "navigation",
     description: "Page index navigation controls.",
     whenToUse: "Use for paged content lists and tables.",
-    snippet: `import { Pagination, PaginationContent, PaginationItem, PaginationButton, PaginationPrevious, PaginationNext } from "@mew/ui";
-
-<Pagination>
-  <PaginationContent>
-    <PaginationItem><PaginationPrevious /></PaginationItem>
-    <PaginationItem><PaginationButton isActive>1</PaginationButton></PaginationItem>
-    <PaginationItem><PaginationNext /></PaginationItem>
-  </PaginationContent>
-</Pagination>;`,
-    variations: [{ title: "With ellipsis", code: `<PaginationEllipsis />;` }],
-    compositionExports: ["Pagination", "PaginationContent", "PaginationItem", "PaginationButton", "PaginationPrevious", "PaginationNext", "PaginationEllipsis"],
+    snippet: "import { Pagination, PaginationContent, PaginationItem, PaginationButton } from \"@luiggidiog/mew-ui\";\n\n<Pagination>...</Pagination>;",
+    variations: [{"title":"With ellipsis","code":"// With ellipsis variation"}],
+    compositionExports: ["Pagination","PaginationContent","PaginationItem","PaginationButton","PaginationPrevious","PaginationNext","PaginationEllipsis"],
+    preview: true,
+  },
+  {
+    name: "Stepper",
+    category: "navigation",
+    description: "Step sequence for multi-step workflows.",
+    whenToUse: "Use for onboarding, checkout, and setup flows.",
+    snippet: "import { Stepper } from \"@luiggidiog/mew-ui\";\n\n<Stepper currentStep={1} steps={steps} />;",
+    variations: [{"title":"Manual statuses","code":"// Manual statuses variation"}],
+    compositionExports: ["Stepper"],
     preview: true,
   },
   {
@@ -247,14 +362,49 @@ export const SHOWCASE_COMPONENTS: ShowcaseComponentT[] = [
     category: "feedback",
     description: "Inline feedback message with semantic variants.",
     whenToUse: "Use for contextual warnings, success, error, and info messages.",
-    snippet: `import { Alert, AlertTitle, AlertDescription } from "@mew/ui";
-
-<Alert variant="warning">
-  <AlertTitle>Unsaved changes</AlertTitle>
-  <AlertDescription>Save before leaving this page.</AlertDescription>
-</Alert>;`,
-    variations: [{ title: "Success", code: `<Alert variant="success">...</Alert>;` }],
-    compositionExports: ["Alert", "AlertTitle", "AlertDescription"],
+    snippet: "import { Alert, AlertTitle, AlertDescription } from \"@luiggidiog/mew-ui\";\n\n<Alert><AlertTitle>Saved</AlertTitle></Alert>;",
+    variations: [{"title":"Success","code":"// Success variation"}],
+    compositionExports: ["Alert","AlertTitle","AlertDescription"],
+    preview: true,
+  },
+  {
+    name: "Badge",
+    category: "feedback",
+    description: "Compact status label for metadata and state.",
+    whenToUse: "Use next to concise status information.",
+    snippet: "import { Badge } from \"@luiggidiog/mew-ui\";\n\n<Badge variant=\"success\">Connected</Badge>;",
+    variations: [{"title":"Warning","code":"// Warning variation"},{"title":"Error","code":"// Error variation"}],
+    compositionExports: ["Badge"],
+    preview: true,
+  },
+  {
+    name: "Callout",
+    category: "feedback",
+    description: "Supporting information block.",
+    whenToUse: "Use for helpful notes that are not critical alerts.",
+    snippet: "import { Callout } from \"@luiggidiog/mew-ui\";\n\n<Callout title=\"Tip\">Use tokens.</Callout>;",
+    variations: [{"title":"Warning","code":"// Warning variation"}],
+    compositionExports: ["Callout"],
+    preview: true,
+  },
+  {
+    name: "Banner",
+    category: "feedback",
+    description: "Persistent announcement or page-level notice.",
+    whenToUse: "Use for broad state or release messages.",
+    snippet: "import { Banner } from \"@luiggidiog/mew-ui\";\n\n<Banner title=\"Beta\" description=\"New docs\" />;",
+    variations: [{"title":"With action","code":"// With action variation"}],
+    compositionExports: ["Banner"],
+    preview: true,
+  },
+  {
+    name: "StatusDot",
+    category: "feedback",
+    description: "Tiny status indicator with optional label.",
+    whenToUse: "Use for connection, sync, and health states.",
+    snippet: "import { StatusDot } from \"@luiggidiog/mew-ui\";\n\n<StatusDot status=\"success\" label=\"Online\" />;",
+    variations: [{"title":"Icon only","code":"// Icon only variation"}],
+    compositionExports: ["StatusDot"],
     preview: true,
   },
   {
@@ -262,26 +412,48 @@ export const SHOWCASE_COMPONENTS: ShowcaseComponentT[] = [
     category: "feedback",
     description: "Fallback state when no content is available.",
     whenToUse: "Use for first-run, no-results, and disconnected states.",
-    snippet: `import { EmptyState, Button } from "@mew/ui";
-
-<EmptyState
-  title="No conversations"
-  description="Start a new chat to continue."
-  action={<Button size="sm">New chat</Button>}
-/>;`,
-    variations: [{ title: "Custom icon", code: `<EmptyState icon={<YourIcon />} title="Nothing here" />;` }],
+    snippet: "import { EmptyState } from \"@luiggidiog/mew-ui\";\n\n<EmptyState title=\"No conversations\" />;",
+    variations: [{"title":"Custom icon","code":"// Custom icon variation"}],
     compositionExports: ["EmptyState"],
+    preview: true,
+  },
+  {
+    name: "MewEmptyState",
+    category: "feedback",
+    description: "Empty state wrapper with subtle paw motif.",
+    whenToUse: "Use only for optional Mew micro-brand moments.",
+    snippet: "import { MewEmptyState } from \"@luiggidiog/mew-ui\";\n\n<MewEmptyState title=\"Nothing here\" />;",
+    variations: [{"title":"With action","code":"// With action variation"}],
+    compositionExports: ["MewEmptyState"],
+    preview: true,
+  },
+  {
+    name: "ErrorState",
+    category: "feedback",
+    description: "Centered recoverable error state.",
+    whenToUse: "Use when a panel or page fails to load.",
+    snippet: "import { ErrorState } from \"@luiggidiog/mew-ui\";\n\n<ErrorState action={<Button>Retry</Button>} />;",
+    variations: [{"title":"Custom title","code":"// Custom title variation"}],
+    compositionExports: ["ErrorState"],
+    preview: true,
+  },
+  {
+    name: "LoadingState",
+    category: "feedback",
+    description: "Centered loading state.",
+    whenToUse: "Use while a panel or route is fetching data.",
+    snippet: "import { LoadingState } from \"@luiggidiog/mew-ui\";\n\n<LoadingState description=\"Fetching projects\" />;",
+    variations: [{"title":"Custom title","code":"// Custom title variation"}],
+    compositionExports: ["LoadingState"],
     preview: true,
   },
   {
     name: "Progress",
     category: "feedback",
     description: "Linear progress indicator.",
-    whenToUse: "Use to communicate progress over time or loading completion.",
-    snippet: `import { Progress } from "@mew/ui";
-
-<Progress value={64} />;`,
-    variations: [{ title: "Indeterminate", code: `<Progress />;` }],
+    whenToUse: "Use to communicate progress over time.",
+    snippet: "import { Progress } from \"@luiggidiog/mew-ui\";\n\n<Progress value={64} />;",
+    variations: [{"title":"Indeterminate","code":"// Indeterminate variation"}],
     compositionExports: ["Progress"],
     preview: true,
   },
@@ -290,17 +462,19 @@ export const SHOWCASE_COMPONENTS: ShowcaseComponentT[] = [
     category: "feedback",
     description: "Transient notification pattern.",
     whenToUse: "Use for short-lived feedback after actions.",
-    snippet: `import { Toaster, toast } from "@mew/ui";
-
-<Toaster />
-
-toast({
-  title: "Saved",
-  description: "Your settings were updated.",
-  variant: "success",
-});`,
-    variations: [{ title: "Hook", code: `const { toasts, dismiss } = useToast();` }],
-    compositionExports: ["Toaster", "useToast", "toast", "dismissToast"],
+    snippet: "import { Toaster, toast } from \"@luiggidiog/mew-ui\";\n\n<Toaster />; toast({ title: \"Saved\" });",
+    variations: [{"title":"Hook","code":"// Hook variation"}],
+    compositionExports: ["Toaster","useToast","toast","dismissToast"],
+    preview: true,
+  },
+  {
+    name: "Loading primitives",
+    category: "feedback",
+    description: "Small loading primitives for composition.",
+    whenToUse: "Use for inline or skeleton loading.",
+    snippet: "import { Skeleton, Spinner } from \"@luiggidiog/mew-ui\";\n\n<Skeleton /><Spinner />;",
+    variations: [{"title":"Shimmer","code":"// Shimmer variation"}],
+    compositionExports: ["Skeleton","Spinner"],
     preview: true,
   },
   {
@@ -308,34 +482,29 @@ toast({
     category: "overlays",
     description: "Modal dialog for focused tasks.",
     whenToUse: "Use for confirmations, forms, and focused decisions.",
-    snippet: `import { Dialog } from "@mew/ui";
-
-<Dialog open={open} onOpenChange={setOpen} title="Dialog title">
-  <p>Body content</p>
-</Dialog>;`,
-    variations: [{ title: "Confirm dialog", code: `<ConfirmDialog open={open} onOpenChange={setOpen} title="Delete?" />;` }],
-    compositionExports: ["Dialog", "ConfirmDialog"],
+    snippet: "import { Dialog } from \"@luiggidiog/mew-ui\";\n\n<Dialog open={open} onOpenChange={setOpen} title=\"Dialog\" />;",
+    variations: [{"title":"Confirm dialog","code":"// Confirm dialog variation"}],
+    compositionExports: ["Dialog","ConfirmDialog"],
     preview: true,
+  },
+  {
+    name: "Drawer",
+    category: "overlays",
+    description: "Sheet aliases using drawer terminology.",
+    whenToUse: "Use when your product language prefers drawer over sheet.",
+    snippet: "import { Drawer, DrawerContent, DrawerTrigger } from \"@luiggidiog/mew-ui\";\n\n<Drawer><DrawerTrigger>Open</DrawerTrigger><DrawerContent /></Drawer>;",
+    variations: [{"title":"Left side","code":"// Left side variation"}],
+    compositionExports: ["Drawer","DrawerTrigger","DrawerContent","DrawerClose","DrawerHeader","DrawerTitle","DrawerDescription"],
+    preview: false,
   },
   {
     name: "Sheet",
     category: "overlays",
     description: "Side panel overlay for secondary workflows.",
     whenToUse: "Use for settings and contextual actions without full navigation.",
-    snippet: `import { Sheet, SheetTrigger, SheetContent, SheetHeader, SheetTitle, SheetDescription, SheetClose } from "@mew/ui";
-
-<Sheet>
-  <SheetTrigger>Open</SheetTrigger>
-  <SheetContent>
-    <SheetHeader>
-      <SheetTitle>Settings</SheetTitle>
-      <SheetDescription>Quick options</SheetDescription>
-    </SheetHeader>
-    <SheetClose>Done</SheetClose>
-  </SheetContent>
-</Sheet>;`,
-    variations: [{ title: "Left side", code: `<SheetContent side="left">...</SheetContent>;` }],
-    compositionExports: ["Sheet", "SheetTrigger", "SheetContent", "SheetClose", "SheetHeader", "SheetTitle", "SheetDescription"],
+    snippet: "import { Sheet, SheetContent, SheetTrigger } from \"@luiggidiog/mew-ui\";\n\n<Sheet><SheetTrigger>Open</SheetTrigger><SheetContent /></Sheet>;",
+    variations: [{"title":"Left side","code":"// Left side variation"}],
+    compositionExports: ["Sheet","SheetTrigger","SheetContent","SheetClose","SheetHeader","SheetTitle","SheetDescription"],
     preview: true,
   },
   {
@@ -343,34 +512,19 @@ toast({
     category: "overlays",
     description: "Anchored floating panel for lightweight contextual UI.",
     whenToUse: "Use for small contextual options tied to a trigger.",
-    snippet: `import { Popover, PopoverTrigger, PopoverContent, PopoverClose } from "@mew/ui";
-
-<Popover>
-  <PopoverTrigger>Open</PopoverTrigger>
-  <PopoverContent>
-    Content
-    <PopoverClose>Close</PopoverClose>
-  </PopoverContent>
-</Popover>;`,
-    variations: [{ title: "Side offset", code: `<PopoverContent sideOffset={8}>...</PopoverContent>;` }],
-    compositionExports: ["Popover", "PopoverTrigger", "PopoverContent", "PopoverClose"],
+    snippet: "import { Popover, PopoverTrigger, PopoverContent } from \"@luiggidiog/mew-ui\";\n\n<Popover>...</Popover>;",
+    variations: [{"title":"Side offset","code":"// Side offset variation"}],
+    compositionExports: ["Popover","PopoverTrigger","PopoverContent","PopoverClose"],
     preview: true,
   },
   {
     name: "Tooltip",
     category: "overlays",
     description: "Small hover/focus helper text.",
-    whenToUse: "Use for concise hints, never for critical content.",
-    snippet: `import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@mew/ui";
-
-<TooltipProvider>
-  <Tooltip>
-    <TooltipTrigger>Hover</TooltipTrigger>
-    <TooltipContent>Helpful hint</TooltipContent>
-  </Tooltip>
-</TooltipProvider>;`,
-    variations: [{ title: "Custom side", code: `<TooltipContent side="right">Hint</TooltipContent>;` }],
-    compositionExports: ["TooltipProvider", "Tooltip", "TooltipTrigger", "TooltipContent"],
+    whenToUse: "Use for concise hints, never critical content.",
+    snippet: "import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from \"@luiggidiog/mew-ui\";\n\n<TooltipProvider>...</TooltipProvider>;",
+    variations: [{"title":"Custom side","code":"// Custom side variation"}],
+    compositionExports: ["TooltipProvider","Tooltip","TooltipTrigger","TooltipContent"],
     preview: true,
   },
   {
@@ -378,31 +532,9 @@ toast({
     category: "overlays",
     description: "Action menu anchored to a trigger.",
     whenToUse: "Use for secondary actions and contextual command lists.",
-    snippet: `import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator } from "@mew/ui";
-
-<DropdownMenu>
-  <DropdownMenuTrigger>Open</DropdownMenuTrigger>
-  <DropdownMenuContent>
-    <DropdownMenuItem>Edit</DropdownMenuItem>
-    <DropdownMenuSeparator />
-    <DropdownMenuItem>Delete</DropdownMenuItem>
-  </DropdownMenuContent>
-</DropdownMenu>;`,
-    variations: [{ title: "Radio group", code: `<DropdownMenuRadioGroup value={value}>...</DropdownMenuRadioGroup>;` }],
-    compositionExports: [
-      "DropdownMenu",
-      "DropdownMenuTrigger",
-      "DropdownMenuContent",
-      "DropdownMenuItem",
-      "DropdownMenuCheckboxItem",
-      "DropdownMenuRadioGroup",
-      "DropdownMenuRadioItem",
-      "DropdownMenuLabel",
-      "DropdownMenuSeparator",
-      "DropdownMenuSub",
-      "DropdownMenuSubTrigger",
-      "DropdownMenuSubContent",
-    ],
+    snippet: "import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent } from \"@luiggidiog/mew-ui\";\n\n<DropdownMenu>...</DropdownMenu>;",
+    variations: [{"title":"Radio group","code":"// Radio group variation"}],
+    compositionExports: ["DropdownMenu","DropdownMenuTrigger","DropdownMenuContent","DropdownMenuItem","DropdownMenuCheckboxItem","DropdownMenuRadioGroup","DropdownMenuRadioItem","DropdownMenuLabel","DropdownMenuSeparator","DropdownMenuSub","DropdownMenuSubTrigger","DropdownMenuSubContent"],
     preview: true,
   },
   {
@@ -410,12 +542,8 @@ toast({
     category: "overlays",
     description: "Right-click contextual menu.",
     whenToUse: "Use for secondary actions tied to an item surface.",
-    snippet: `import { ContextMenu } from "@mew/ui";
-
-<ContextMenu items={[{ label: "Edit", onSelect: () => {} }]}>
-  <div>Right-click here</div>
-</ContextMenu>;`,
-    variations: [{ title: "Destructive item", code: `{ label: "Delete", variant: "destructive", onSelect: () => {} }` }],
+    snippet: "import { ContextMenu } from \"@luiggidiog/mew-ui\";\n\n<ContextMenu items={items}>...</ContextMenu>;",
+    variations: [{"title":"Destructive item","code":"// Destructive item variation"}],
     compositionExports: ["ContextMenu"],
     preview: true,
   },
@@ -424,10 +552,8 @@ toast({
     category: "overlays",
     description: "Image preview overlay with zoom-focused presentation.",
     whenToUse: "Use for media detail inspection.",
-    snippet: `import { ImageLightbox } from "@mew/ui";
-
-<ImageLightbox open={open} onOpenChange={setOpen} src="/image.png" alt="Preview" />;`,
-    variations: [{ title: "Download filename", code: `<ImageLightbox downloadFileName="asset.png" ... />;` }],
+    snippet: "import { ImageLightbox } from \"@luiggidiog/mew-ui\";\n\n<ImageLightbox open={open} src=\"/image.png\" alt=\"Preview\" />;",
+    variations: [{"title":"Download filename","code":"// Download filename variation"}],
     compositionExports: ["ImageLightbox"],
     preview: false,
   },
@@ -436,10 +562,8 @@ toast({
     category: "data-display",
     description: "Identity avatar for user and assistant roles.",
     whenToUse: "Use in chat lists, headers, and identity contexts.",
-    snippet: `import { Avatar } from "@mew/ui";
-
-<Avatar name="John Doe" role="user" />;`,
-    variations: [{ title: "Assistant", code: `<Avatar name="Mew" role="assistant" size="sm" />;` }],
+    snippet: "import { Avatar } from \"@luiggidiog/mew-ui\";\n\n<Avatar name=\"John Doe\" />;",
+    variations: [{"title":"Assistant","code":"// Assistant variation"}],
     compositionExports: ["Avatar"],
     preview: true,
   },
@@ -448,16 +572,9 @@ toast({
     category: "data-display",
     description: "Structured data container with optional header/value.",
     whenToUse: "Use for grouped metrics and summarized information.",
-    snippet: `import { Card, CardHeader, CardTitle, CardValue } from "@mew/ui";
-
-<Card>
-  <CardHeader>
-    <CardTitle>Total requests</CardTitle>
-    <CardValue>132</CardValue>
-  </CardHeader>
-</Card>;`,
-    variations: [{ title: "Custom body", code: `<Card><div className="p-4">Body</div></Card>;` }],
-    compositionExports: ["Card", "CardHeader", "CardTitle", "CardValue"],
+    snippet: "import { Card, CardHeader, CardTitle, CardValue } from \"@luiggidiog/mew-ui\";\n\n<Card><CardHeader>...</CardHeader></Card>;",
+    variations: [{"title":"Custom body","code":"// Custom body variation"}],
+    compositionExports: ["Card","CardHeader","CardTitle","CardValue"],
     preview: true,
   },
   {
@@ -465,15 +582,59 @@ toast({
     category: "data-display",
     description: "Compact metric block with delta.",
     whenToUse: "Use in dashboards and analytics summaries.",
-    snippet: `import { Stat, StatLabel, StatValue, StatDelta } from "@mew/ui";
-
-<Stat>
-  <StatLabel>Requests</StatLabel>
-  <StatValue>130</StatValue>
-  <StatDelta current={130} previous={100} />
-</Stat>;`,
-    variations: [{ title: "Negative delta", code: `<StatDelta current={80} previous={100} />;` }],
-    compositionExports: ["Stat", "StatLabel", "StatValue", "StatDelta"],
+    snippet: "import { Stat, StatLabel, StatValue, StatDelta } from \"@luiggidiog/mew-ui\";\n\n<Stat>...</Stat>;",
+    variations: [{"title":"Negative delta","code":"// Negative delta variation"}],
+    compositionExports: ["Stat","StatLabel","StatValue","StatDelta"],
+    preview: true,
+  },
+  {
+    name: "DataTable",
+    category: "data-display",
+    description: "Typed tabular data rendering component.",
+    whenToUse: "Use for structured row/column data.",
+    snippet: "import { DataTable, type ColumnT } from \"@luiggidiog/mew-ui\";\n\n<DataTable columns={columns} data={rows} />;",
+    variations: [{"title":"Empty state","code":"// Empty state variation"}],
+    compositionExports: ["DataTable"],
+    preview: true,
+  },
+  {
+    name: "TableToolbar",
+    category: "data-display",
+    description: "Toolbar companion for tables.",
+    whenToUse: "Use above DataTable for search, filters, and actions.",
+    snippet: "import { TableToolbar } from \"@luiggidiog/mew-ui\";\n\n<TableToolbar title=\"Users\" search={<SearchInput />} />;",
+    variations: [{"title":"With filters","code":"// With filters variation"}],
+    compositionExports: ["TableToolbar"],
+    preview: true,
+  },
+  {
+    name: "DescriptionList",
+    category: "data-display",
+    description: "Semantic term-description pairs.",
+    whenToUse: "Use for metadata and detail panels.",
+    snippet: "import { DescriptionList } from \"@luiggidiog/mew-ui\";\n\n<DescriptionList items={items} />;",
+    variations: [{"title":"Horizontal","code":"// Horizontal variation"}],
+    compositionExports: ["DescriptionList"],
+    preview: true,
+  },
+  {
+    name: "List",
+    category: "data-display",
+    description: "Structured list with title, description, meta, action, and icon slots.",
+    whenToUse: "Use for collections that are not tabular.",
+    snippet: "import { List, ListItem } from \"@luiggidiog/mew-ui\";\n\n<List><ListItem title=\"Project\" /></List>;",
+    variations: [{"title":"With action","code":"// With action variation"}],
+    compositionExports: ["List","ListItem"],
+    preview: true,
+  },
+  {
+    name: "Timeline",
+    category: "data-display",
+    description: "Ordered event list.",
+    whenToUse: "Use for activity, history, and audit trails.",
+    snippet: "import { Timeline } from \"@luiggidiog/mew-ui\";\n\n<Timeline items={items} />;",
+    variations: [{"title":"With icons","code":"// With icons variation"}],
+    compositionExports: ["Timeline"],
     preview: true,
   },
   {
@@ -481,10 +642,8 @@ toast({
     category: "data-display",
     description: "Definition-list style key/value display.",
     whenToUse: "Use for compact metadata panels.",
-    snippet: `import { KeyValue } from "@mew/ui";
-
-<KeyValue items={[{ label: "Provider", value: "Ollama" }]} />;`,
-    variations: [{ title: "Horizontal", code: `<KeyValue direction="horizontal" items={items} />;` }],
+    snippet: "import { KeyValue } from \"@luiggidiog/mew-ui\";\n\n<KeyValue items={items} />;",
+    variations: [{"title":"Horizontal","code":"// Horizontal variation"}],
     compositionExports: ["KeyValue"],
     preview: true,
   },
@@ -493,48 +652,28 @@ toast({
     category: "data-display",
     description: "Monospaced code viewer with copy action.",
     whenToUse: "Use to present runnable snippets and examples.",
-    snippet: `import { CodeBlock } from "@mew/ui";
-
-<CodeBlock language="tsx" code={source} />;`,
-    variations: [{ title: "No copy", code: `<CodeBlock showCopy={false} code={source} />;` }],
+    snippet: "import { CodeBlock } from \"@luiggidiog/mew-ui\";\n\n<CodeBlock language=\"tsx\" code={source} />;",
+    variations: [{"title":"No copy","code":"// No copy variation"}],
     compositionExports: ["CodeBlock"],
     preview: true,
   },
   {
-    name: "InlineEditor",
+    name: "Utility labels",
     category: "data-display",
-    description: "Inline edit surface with save/cancel behavior.",
-    whenToUse: "Use for quick edits without leaving context.",
-    snippet: `import { InlineEditor } from "@mew/ui";
-
-<InlineEditor value={value} onChange={setValue} onSave={save} onCancel={cancel} />;`,
-    variations: [{ title: "Auto focus", code: `<InlineEditor autoFocusOnMount />;` }],
-    compositionExports: ["InlineEditor"],
+    description: "Small primitives for compact metadata.",
+    whenToUse: "Use for keyboard shortcuts, tags, and labels.",
+    snippet: "import { Kbd, Tag } from \"@luiggidiog/mew-ui\";\n\n<Kbd>⌘K</Kbd><Tag>Stable</Tag>;",
+    variations: [{"title":"Tag variants","code":"// Tag variants variation"}],
+    compositionExports: ["Kbd","Tag"],
     preview: true,
-  },
-  {
-    name: "DataTable",
-    category: "data-display",
-    description: "Tabular data rendering component.",
-    whenToUse: "Use for structured row/column data.",
-    snippet: `import { DataTable, type ColumnT } from "@mew/ui";
-
-const columns: ColumnT<{ id: string }>[] = [{ key: "id", header: "ID" }];
-
-<DataTable columns={columns} data={[{ id: "1" }]} />;`,
-    variations: [{ title: "Empty state", code: `<DataTable columns={columns} data={[]} emptyMessage="No results" />;` }],
-    compositionExports: ["DataTable"],
-    preview: false,
   },
   {
     name: "Container",
     category: "layout",
     description: "Centered max-width wrapper.",
     whenToUse: "Use to constrain content width consistently across pages.",
-    snippet: `import { Container } from "@mew/ui";
-
-<Container size="lg">...</Container>;`,
-    variations: [{ title: "Full", code: `<Container size="full">...</Container>;` }],
+    snippet: "import { Container } from \"@luiggidiog/mew-ui\";\n\n<Container size=\"lg\">...</Container>;",
+    variations: [{"title":"Full","code":"// Full variation"}],
     compositionExports: ["Container"],
     preview: true,
   },
@@ -543,10 +682,8 @@ const columns: ColumnT<{ id: string }>[] = [{ key: "id", header: "ID" }];
     category: "layout",
     description: "Directional spacing layout helper.",
     whenToUse: "Use for vertical/horizontal rhythm with predictable gaps.",
-    snippet: `import { Stack } from "@mew/ui";
-
-<Stack gap="md">...</Stack>;`,
-    variations: [{ title: "Row", code: `<Stack direction="row" align="center" gap="sm">...</Stack>;` }],
+    snippet: "import { Stack } from \"@luiggidiog/mew-ui\";\n\n<Stack gap=\"md\">...</Stack>;",
+    variations: [{"title":"Row","code":"// Row variation"}],
     compositionExports: ["Stack"],
     preview: true,
   },
@@ -555,10 +692,8 @@ const columns: ColumnT<{ id: string }>[] = [{ key: "id", header: "ID" }];
     category: "layout",
     description: "Custom scroll container.",
     whenToUse: "Use for bounded lists and panels with overflow.",
-    snippet: `import { ScrollArea } from "@mew/ui";
-
-<ScrollArea className="h-40">...</ScrollArea>;`,
-    variations: [{ title: "Horizontal", code: `<ScrollArea className="w-full">...</ScrollArea>;` }],
+    snippet: "import { ScrollArea } from \"@luiggidiog/mew-ui\";\n\n<ScrollArea className=\"h-40\">...</ScrollArea>;",
+    variations: [{"title":"Horizontal","code":"// Horizontal variation"}],
     compositionExports: ["ScrollArea"],
     preview: true,
   },
@@ -566,11 +701,9 @@ const columns: ColumnT<{ id: string }>[] = [{ key: "id", header: "ID" }];
     name: "SettingsSection",
     category: "layout",
     description: "Structured section wrapper for settings pages.",
-    whenToUse: "Use to group setting rows under a clear title/description.",
-    snippet: `import { SettingsSection } from "@mew/ui";
-
-<SettingsSection title="Providers" description="Manage connections">...</SettingsSection>;`,
-    variations: [{ title: "Custom rows", code: `<SettingsSection title="General">...</SettingsSection>;` }],
+    whenToUse: "Use to group setting rows under title/description.",
+    snippet: "import { SettingsSection } from \"@luiggidiog/mew-ui\";\n\n<SettingsSection title=\"Providers\">...</SettingsSection>;",
+    variations: [{"title":"Custom rows","code":"// Custom rows variation"}],
     compositionExports: ["SettingsSection"],
     preview: true,
   },
@@ -579,29 +712,51 @@ const columns: ColumnT<{ id: string }>[] = [{ key: "id", header: "ID" }];
     category: "layout",
     description: "Keeps media and blocks in fixed ratio.",
     whenToUse: "Use for images/video placeholders requiring consistent ratio.",
-    snippet: `import { AspectRatio } from "@mew/ui";
-
-<AspectRatio ratio={16 / 9}>...</AspectRatio>;`,
-    variations: [{ title: "Square", code: `<AspectRatio ratio={1}>...</AspectRatio>;` }],
+    snippet: "import { AspectRatio } from \"@luiggidiog/mew-ui\";\n\n<AspectRatio ratio={16 / 9}>...</AspectRatio>;",
+    variations: [{"title":"Square","code":"// Square variation"}],
     compositionExports: ["AspectRatio"],
     preview: true,
   },
   {
-    name: "Utility primitives",
+    name: "Layout utilities",
     category: "layout",
-    description: "Small primitives used across composition and content rhythm.",
-    whenToUse: "Use for visual polish and compact metadata display.",
-    snippet: `import { Separator, Skeleton, Spinner, Kbd, Tag } from "@mew/ui";
-
-<Separator />
-<Skeleton width={120} height={12} />
-<Spinner />
-<Kbd>⌘K</Kbd>
-<Tag>Stable</Tag>;`,
-    variations: [{ title: "Skeleton shimmer", code: `<Skeleton variant="shimmer" width="100%" height={12} />;` }],
-    compositionExports: ["Separator", "Skeleton", "Spinner", "Kbd", "Tag"],
+    description: "Separators for visual rhythm.",
+    whenToUse: "Use for subtle separation in compact layouts.",
+    snippet: "import { Separator } from \"@luiggidiog/mew-ui\";\n\n<Separator />;",
+    variations: [{"title":"Vertical","code":"// Vertical variation"}],
+    compositionExports: ["Separator"],
     preview: true,
   },
+  {
+    name: "DashboardGrid",
+    category: "patterns",
+    description: "Responsive grid for dashboard cards.",
+    whenToUse: "Use to lay out stats and summary cards.",
+    snippet: "import { DashboardGrid } from \"@luiggidiog/mew-ui\";\n\n<DashboardGrid columns={3}>...</DashboardGrid>;",
+    variations: [{"title":"Four columns","code":"// Four columns variation"}],
+    compositionExports: ["DashboardGrid"],
+    preview: true,
+  },
+  {
+    name: "SettingsLayout",
+    category: "patterns",
+    description: "Settings navigation plus content layout.",
+    whenToUse: "Use for account, workspace, and product settings pages.",
+    snippet: "import { SettingsLayout } from \"@luiggidiog/mew-ui\";\n\n<SettingsLayout items={items}>...</SettingsLayout>;",
+    variations: [{"title":"With description","code":"// With description variation"}],
+    compositionExports: ["SettingsLayout"],
+    preview: true,
+  },
+  {
+    name: "LoginCard",
+    category: "patterns",
+    description: "Authentication card with subtle Mew branding slot.",
+    whenToUse: "Use for sign-in, invite, and account access screens.",
+    snippet: "import { LoginCard, Input, Button } from \"@luiggidiog/mew-ui\";\n\n<LoginCard><Input /><Button>Sign in</Button></LoginCard>;",
+    variations: [{"title":"Custom footer","code":"// Custom footer variation"}],
+    compositionExports: ["LoginCard"],
+    preview: true,
+  }
 ];
 
 export const SHOWCASE_COMPONENT_NAMES = SHOWCASE_COMPONENTS.map((component) => component.name);

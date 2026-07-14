@@ -22,9 +22,9 @@ export function EmptyState({ icon, title, description, action, className }: Empt
         {icon ?? <PawIcon className="w-8 h-8" />}
       </div>
       <div className="flex flex-col gap-1">
-        <p className="text-sm font-medium text-text-primary">{title}</p>
+        <p className="m-0 text-sm font-medium text-text-primary">{title}</p>
         {description && (
-          <p className="text-sm text-text-secondary">{description}</p>
+          <p className="m-0 text-sm text-text-secondary">{description}</p>
         )}
       </div>
       {action && <div className="mt-1">{action}</div>}

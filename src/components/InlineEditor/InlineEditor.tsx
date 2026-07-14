@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import { cn } from "@mew/ui/utils/cn";
 import { Textarea } from "@mew/ui/components/Textarea";
 import { Button } from "@mew/ui/components/Button";
-import { XIcon, SendIcon } from "@mew/ui/icons";
+import { CheckIcon, XIcon } from "@mew/ui/icons";
 
 type PropsT = {
   value: string;
@@ -81,9 +81,9 @@ export function InlineEditor(props: PropsT) {
             onClick={onCancel}
             disabled={disabled}
             aria-label={cancelLabel}
-            className="h-7 w-7 p-0 rounded-md border border-transparent hover:border-border/60"
+            className="h-8 w-8 !p-0 rounded-lg border border-transparent hover:border-border/60"
           >
-            <XIcon className="h-3.5 w-3.5" />
+            <XIcon className="h-4 w-4 shrink-0" />
           </Button>
           <Button
             variant="primary"
@@ -91,9 +91,9 @@ export function InlineEditor(props: PropsT) {
             onClick={onSave}
             disabled={saveDisabled || disabled}
             aria-label={saveLabel}
-            className="h-7 w-7 p-0 rounded-md"
+            className="h-8 w-8 !p-0 rounded-lg"
           >
-            <SendIcon className="h-3.5 w-3.5" />
+            <CheckIcon className="h-4 w-4 shrink-0" />
           </Button>
         </div>
       </div>

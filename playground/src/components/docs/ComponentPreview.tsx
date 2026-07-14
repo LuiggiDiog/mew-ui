@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import { SHOWCASE_COMPONENTS } from "../../lib/showcase/component-registry";
 
 const categoryPreviews = {
+  foundations: dynamic(() => import("./previews/FoundationsPreview")),
   actions: dynamic(() => import("./previews/ActionsPreview")),
   forms: dynamic(() => import("./previews/FormsPreview")),
   navigation: dynamic(() => import("./previews/NavigationPreview")),
@@ -11,6 +12,7 @@ const categoryPreviews = {
   overlays: dynamic(() => import("./previews/OverlaysPreview")),
   layout: dynamic(() => import("./previews/LayoutPreview")),
   "data-display": dynamic(() => import("./previews/DataDisplayPreview")),
+  patterns: dynamic(() => import("./previews/PatternsPreview")),
 };
 
 type PropsT = {
@@ -20,12 +22,12 @@ type PropsT = {
 export function ComponentPreview({ name }: PropsT) {
   const component = SHOWCASE_COMPONENTS.find((c) => c.name === name);
   if (!component) {
-    return <p className="text-xs text-text-secondary">Composed export. See usage snippet below.</p>;
+    return <p className="m-0 text-xs text-text-secondary">Composed export. See usage snippet below.</p>;
   }
 
   const Preview = categoryPreviews[component.category as keyof typeof categoryPreviews];
   if (!Preview) {
-    return <p className="text-xs text-text-secondary">Composed export. See usage snippet below.</p>;
+    return <p className="m-0 text-xs text-text-secondary">Composed export. See usage snippet below.</p>;
   }
 
   return <Preview name={name} />;

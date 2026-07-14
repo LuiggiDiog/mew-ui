@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
-import { Toaster } from "@mew/ui";
+import { Toaster } from "@luiggidiog/mew-ui";
 import { ComponentShowcase } from "../../../components/docs/ComponentShowcase";
 import { DocsSidebar } from "../../../components/docs/DocsSidebar";
+import { GettingStartedContent } from "../../../components/docs/GettingStartedContent";
 import { CATEGORIES, type CategoryKeyT } from "../../../lib/showcase/categories";
 import { getComponentsByCategory } from "../../../lib/showcase/component-registry";
 
@@ -17,7 +18,7 @@ export default async function ComponentsCategoryPage({ params }: PropsT) {
   const { category } = await params;
 
   if (category === "getting-started") {
-    notFound();
+    return <GettingStartedContent />;
   }
 
   const categoryMeta = CATEGORIES.find((item) => item.key === category);
@@ -42,8 +43,8 @@ export default async function ComponentsCategoryPage({ params }: PropsT) {
 
       <div className="space-y-6">
         <header className="space-y-2">
-          <h1 className="text-2xl font-semibold text-text-primary">{categoryMeta.title}</h1>
-          <p className="text-sm text-text-secondary">{categoryMeta.description}</p>
+          <h1 className="m-0 text-2xl font-semibold text-text-primary">{categoryMeta.title}</h1>
+          <p className="m-0 text-sm text-text-secondary">{categoryMeta.description}</p>
         </header>
 
         <section className="space-y-4">

@@ -1,6 +1,6 @@
 "use client";
 
-import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
+import { DropdownMenu as DropdownMenuPrimitive } from "radix-ui";
 import type { ComponentPropsWithoutRef } from "react";
 import { cn } from "@mew/ui/utils/cn";
 import { ChevronRightIcon } from "@mew/ui/icons";

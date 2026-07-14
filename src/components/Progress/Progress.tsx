@@ -1,4 +1,6 @@
-import * as ProgressPrimitive from "@radix-ui/react-progress";
+"use client";
+
+import { Progress as ProgressPrimitive } from "radix-ui";
 import { cn } from "@mew/ui/utils/cn";
 
 interface ProgressPropsT {
