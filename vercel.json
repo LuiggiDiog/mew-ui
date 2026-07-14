@@ -12,6 +12,14 @@
       "dest": "/playground/_next/$1"
     },
     {
+      "src": "/components/([^/]+)",
+      "dest": "/playground/components/[category]?nxtPcategory=$1"
+    },
+    {
+      "src": "/components/([^/]+)\\.rsc",
+      "dest": "/playground/components/[category].rsc?nxtPcategory=$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/playground/$1"
     }
