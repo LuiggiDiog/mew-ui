@@ -12,7 +12,7 @@ import {
   Toaster,
   toast,
   Button,
-} from "@mew/ui";
+} from "@luiggidiog/mew-ui";
 
 export default function FeedbackPreview({ name }: { name: string }) {
   switch (name) {

@@ -2,12 +2,12 @@ import type { HTMLAttributes, AnchorHTMLAttributes } from "react";
 import { cn } from "@mew/ui/utils/cn";
 import { ChevronRightIcon } from "@mew/ui/icons";
 
-interface BreadcrumbProps extends HTMLAttributes<HTMLElement> {}
-interface BreadcrumbListProps extends HTMLAttributes<HTMLOListElement> {}
-interface BreadcrumbItemProps extends HTMLAttributes<HTMLLIElement> {}
-interface BreadcrumbLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {}
-interface BreadcrumbPageProps extends HTMLAttributes<HTMLSpanElement> {}
-interface BreadcrumbSeparatorProps extends HTMLAttributes<HTMLSpanElement> {}
+type BreadcrumbProps = HTMLAttributes<HTMLElement>;
+type BreadcrumbListProps = HTMLAttributes<HTMLOListElement>;
+type BreadcrumbItemProps = HTMLAttributes<HTMLLIElement>;
+type BreadcrumbLinkProps = AnchorHTMLAttributes<HTMLAnchorElement>;
+type BreadcrumbPageProps = HTMLAttributes<HTMLSpanElement>;
+type BreadcrumbSeparatorProps = HTMLAttributes<HTMLSpanElement>;
 
 export function Breadcrumb({ className, children, ...props }: BreadcrumbProps) {
   return (

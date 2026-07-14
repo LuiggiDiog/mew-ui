@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@mew/ui";
+import { Button } from "@luiggidiog/mew-ui";
 
 export default function ActionsPreview({ name }: { name: string }) {
   switch (name) {

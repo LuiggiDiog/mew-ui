@@ -1,6 +1,6 @@
 "use client";
 
-import * as ToastPrimitive from "@radix-ui/react-toast";
+import { Toast as ToastPrimitive } from "radix-ui";
 import { cn } from "@mew/ui/utils/cn";
 import { XIcon } from "@mew/ui/icons";
 import { useToast } from "./useToast";

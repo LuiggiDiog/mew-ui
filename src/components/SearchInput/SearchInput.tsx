@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import type { InputHTMLAttributes } from "react";
 import { cn } from "@mew/ui/utils/cn";
 import { SearchIcon, XIcon } from "@mew/ui/icons";

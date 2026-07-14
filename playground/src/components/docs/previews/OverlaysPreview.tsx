@@ -25,7 +25,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@mew/ui";
+} from "@luiggidiog/mew-ui";
 
 export default function OverlaysPreview({ name }: { name: string }) {
   const [sheetOpen, setSheetOpen] = useState(false);

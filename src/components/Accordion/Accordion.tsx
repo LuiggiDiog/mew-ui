@@ -1,4 +1,6 @@
-import * as AccordionPrimitive from "@radix-ui/react-accordion";
+"use client";
+
+import { Accordion as AccordionPrimitive } from "radix-ui";
 import { cn } from "@mew/ui/utils/cn";
 import { ChevronDownIcon } from "@mew/ui/icons";
 import type { ComponentPropsWithoutRef } from "react";

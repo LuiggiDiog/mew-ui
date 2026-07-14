@@ -1,6 +1,6 @@
 "use client";
 
-import * as SelectPrimitive from "@radix-ui/react-select";
+import { Select as SelectPrimitive } from "radix-ui";
 import { cn } from "@mew/ui/utils/cn";
 import { ChevronDownIcon } from "@mew/ui/icons";
 

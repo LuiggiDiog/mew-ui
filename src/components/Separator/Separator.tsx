@@ -1,4 +1,6 @@
-import * as SeparatorPrimitive from "@radix-ui/react-separator";
+"use client";
+
+import { Separator as SeparatorPrimitive } from "radix-ui";
 import { cn } from "@mew/ui/utils/cn";
 
 interface SeparatorProps {

@@ -46,7 +46,7 @@ describe("ConfirmDialog", () => {
   });
 
   it("applies destructive variant styling", () => {
-    const { container } = render(
+    render(
       <ConfirmDialog open onOpenChange={() => {}} title="Delete?" variant="destructive" onConfirm={() => {}} />
     );
     const confirmBtn = screen.getByRole("button", { name: "Confirm" });

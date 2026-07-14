@@ -1,6 +1,6 @@
 "use client";
 
-import * as AlertDialog from "@radix-ui/react-alert-dialog";
+import { AlertDialog } from "radix-ui";
 import { cn } from "@mew/ui/utils/cn";
 import { Button } from "@mew/ui/components/Button";
 

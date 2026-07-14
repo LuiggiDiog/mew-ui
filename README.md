@@ -1,4 +1,4 @@
-# @mew/ui
+# @luiggidiog/mew-ui
 
 Design system for the Mew family of applications.
 
@@ -11,7 +11,7 @@ Design system for the Mew family of applications.
 
 ## Design Documentation
 
-- `./DESIGN.md` is the visual and UX source of truth for `@mew/ui`.
+- `./DESIGN.md` is the visual and UX source of truth for `@luiggidiog/mew-ui`.
 - All components and style decisions should align with the token system and guardrails defined there.
 
 ## Cat Reference (Minimal)
@@ -102,21 +102,22 @@ Keep it optional, small, and secondary to usability, readability, and accessibil
 
 ## Styles
 
-- `tokens.css` — Design tokens (colors, font refs)
-- `globals.css` — Resets, scrollbar, focus ring, animations (`shimmer`, `breathe`, `spin`)
+- `styles.css` — Required compiled styles, Tailwind utilities, tokens, and component animations
+- `reset.css` — Optional minimal reset for box sizing, focus ring, and font smoothing
 
 ## Usage
 
 ```css
 /* In your app's globals.css */
-@import "@mew/ui/styles/tokens.css";
-@import "@mew/ui/styles/globals.css";
-@source "../node_modules/@mew/ui/dist/**/*.{js,mjs}";
+@import "@luiggidiog/mew-ui/styles.css";
+
+/* Optional reset */
+@import "@luiggidiog/mew-ui/reset.css";
 ```
 
 ```tsx
-import { Button, Avatar, Badge, Toggle } from "@mew/ui";
-import { Toaster, toast } from "@mew/ui";
-import { SendIcon, MenuIcon, PawIcon } from "@mew/ui/icons";
-import { cn } from "@mew/ui/utils";
+import { Button, Avatar, Badge, Toggle } from "@luiggidiog/mew-ui";
+import { Toaster, toast } from "@luiggidiog/mew-ui";
+import { SendIcon, MenuIcon, PawIcon } from "@luiggidiog/mew-ui/icons";
+import { cn } from "@luiggidiog/mew-ui/utils";
 ```

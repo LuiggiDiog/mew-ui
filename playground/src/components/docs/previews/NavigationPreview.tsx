@@ -19,7 +19,7 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@mew/ui";
+} from "@luiggidiog/mew-ui";
 
 export default function NavigationPreview({ name }: { name: string }) {
   switch (name) {

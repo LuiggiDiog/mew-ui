@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "@mew/ui Playground",
+  title: "@luiggidiog/mew-ui Playground",
   description: "Design system showcase",
 };
 
@@ -38,7 +38,7 @@ export default function RootLayout({
           <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur">
             <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-3">
               <Link href="/" className="text-sm font-semibold text-text-primary">
-                @mew/ui playground
+                @luiggidiog/mew-ui playground
               </Link>
               <nav className="flex items-center gap-2 text-xs">
                 <Link href="/components/getting-started" className="rounded-lg border border-border px-2.5 py-1 text-text-secondary hover:text-text-primary">

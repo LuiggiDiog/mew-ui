@@ -16,7 +16,7 @@ import {
   StatLabel,
   StatValue,
   Tag,
-} from "@mew/ui";
+} from "@luiggidiog/mew-ui";
 
 export default function DataDisplayPreview({ name }: { name: string }) {
   const [text, setText] = useState("Example");

@@ -1,0 +1,284 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@source "../components/**/*.tsx";
+@source "../icons/**/*.tsx";
+
+:root {
+  --mew-color-background: #09090b;
+  --mew-color-surface: #18181b;
+  --mew-color-surface-elevated: #27272a;
+  --mew-color-border: #3f3f46;
+  --mew-color-text-primary: #fafafa;
+  --mew-color-text-secondary: #a1a1aa;
+  --mew-color-accent: #6366f1;
+  --mew-color-accent-hover: #4f46e5;
+  --mew-color-accent-subtle: #6366f11a;
+  --mew-color-success: #10b981;
+  --mew-color-error: #ef4444;
+  --mew-color-warning: #f59e0b;
+  --mew-font-sans: system-ui, sans-serif;
+  --mew-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+@theme {
+  --color-background: var(--mew-color-background);
+  --color-surface: var(--mew-color-surface);
+  --color-surface-elevated: var(--mew-color-surface-elevated);
+  --color-border: var(--mew-color-border);
+  --color-text-primary: var(--mew-color-text-primary);
+  --color-text-secondary: var(--mew-color-text-secondary);
+  --color-accent: var(--mew-color-accent);
+  --color-accent-hover: var(--mew-color-accent-hover);
+  --color-accent-subtle: var(--mew-color-accent-subtle);
+  --color-success: var(--mew-color-success);
+  --color-error: var(--mew-color-error);
+  --color-warning: var(--mew-color-warning);
+  --font-sans: var(--mew-font-sans);
+  --font-mono: var(--mew-font-mono);
+}
+
+@theme inline {
+  --animate-mew-shimmer: mew-shimmer 2s ease-in-out infinite;
+  --animate-mew-breathe: mew-breathe 2s ease-in-out infinite;
+  --animate-spin: mew-spin 0.8s linear infinite;
+  --animate-mew-spin: mew-spin 0.8s linear infinite;
+}
+
+@keyframes mew-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes mew-breathe {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes mew-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes mew-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes mew-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes mew-fade-out-80 {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+
+@keyframes mew-zoom-in-95 {
+  from {
+    transform: scale(0.95);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes mew-zoom-out-95 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.95);
+  }
+}
+
+@keyframes mew-slide-in-from-top {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes mew-slide-out-to-top {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes mew-slide-in-from-bottom {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes mew-slide-out-to-bottom {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes mew-slide-in-from-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes mew-slide-out-to-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes mew-slide-in-from-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes mew-slide-out-to-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes mew-slide-in-from-top-full {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@utility animate-shimmer {
+  background: linear-gradient(110deg, #18181b 30%, #6366f11a 50%, #18181b 70%);
+  background-size: 200% 100%;
+  animation: var(--animate-mew-shimmer);
+}
+
+@utility animate-breathe {
+  animation: var(--animate-mew-breathe);
+}
+
+@utility animate-spin {
+  animation: var(--animate-mew-spin);
+}
+
+@utility animate-in {
+  animation-duration: 150ms;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@utility animate-out {
+  animation-duration: 150ms;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@utility fade-in-0 {
+  animation-name: mew-fade-in;
+}
+
+@utility fade-out-0 {
+  animation-name: mew-fade-out;
+}
+
+@utility fade-out-80 {
+  animation-name: mew-fade-out-80;
+}
+
+@utility zoom-in-95 {
+  animation-name: mew-zoom-in-95;
+}
+
+@utility zoom-out-95 {
+  animation-name: mew-zoom-out-95;
+}
+
+@utility slide-in-from-top {
+  animation-name: mew-slide-in-from-top;
+}
+
+@utility slide-out-to-top {
+  animation-name: mew-slide-out-to-top;
+}
+
+@utility slide-in-from-bottom {
+  animation-name: mew-slide-in-from-bottom;
+}
+
+@utility slide-out-to-bottom {
+  animation-name: mew-slide-out-to-bottom;
+}
+
+@utility slide-in-from-right {
+  animation-name: mew-slide-in-from-right;
+}
+
+@utility slide-out-to-right {
+  animation-name: mew-slide-out-to-right;
+}
+
+@utility slide-in-from-left {
+  animation-name: mew-slide-in-from-left;
+}
+
+@utility slide-out-to-left {
+  animation-name: mew-slide-out-to-left;
+}
+
+@utility slide-in-from-top-full {
+  animation-name: mew-slide-in-from-top-full;
+}

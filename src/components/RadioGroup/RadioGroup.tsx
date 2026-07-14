@@ -1,4 +1,6 @@
-import * as RadioGroupPrimitive from "@radix-ui/react-radio-group";
+"use client";
+
+import { RadioGroup as RadioGroupPrimitive } from "radix-ui";
 import { cn } from "@mew/ui/utils/cn";
 
 interface RadioGroupProps {

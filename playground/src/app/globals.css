@@ -1,18 +1,12 @@
-@import "tailwindcss";
-@import "../../../src/styles/tokens.css";
-@import "../../../src/styles/globals.css";
+@import "../../../src/styles/styles.css";
 
-@source "./**/*.{ts,tsx}";
-@source "../../../src/components/**/*.tsx";
-@source "../../../src/icons/**/*.tsx";
-
-/* Playground overrides — allow scrolling on long showcase pages */
 html,
 body {
-  height: auto;
-  overflow: auto;
+  min-height: 100dvh;
 }
 
 body {
-  min-height: 100dvh;
+  background-color: var(--mew-color-background);
+  color: var(--mew-color-text-primary);
+  font-family: var(--mew-font-sans);
 }

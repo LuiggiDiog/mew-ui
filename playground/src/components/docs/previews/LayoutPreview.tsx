@@ -11,7 +11,7 @@ import {
   Spinner,
   Stack,
   Tag,
-} from "@mew/ui";
+} from "@luiggidiog/mew-ui";
 
 export default function LayoutPreview({ name }: { name: string }) {
   switch (name) {

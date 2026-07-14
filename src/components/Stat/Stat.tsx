@@ -2,9 +2,9 @@ import type { HTMLAttributes } from "react";
 import { cn } from "@mew/ui/utils/cn";
 import { percentageDiff } from "@mew/ui/utils";
 
-interface StatProps extends HTMLAttributes<HTMLDivElement> {}
-interface StatLabelProps extends HTMLAttributes<HTMLParagraphElement> {}
-interface StatValueProps extends HTMLAttributes<HTMLParagraphElement> {}
+type StatProps = HTMLAttributes<HTMLDivElement>;
+type StatLabelProps = HTMLAttributes<HTMLParagraphElement>;
+type StatValueProps = HTMLAttributes<HTMLParagraphElement>;
 
 interface StatDeltaProps extends HTMLAttributes<HTMLSpanElement> {
   current: number;

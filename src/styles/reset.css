@@ -1,0 +1,17 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:focus-visible {
+  outline: 2px solid var(--mew-color-accent, #6366f1);
+  outline-offset: 2px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--mew-font-sans, system-ui, sans-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

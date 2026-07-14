@@ -12,7 +12,7 @@ import {
   Slider,
   Switch,
   Textarea,
-} from "@mew/ui";
+} from "@luiggidiog/mew-ui";
 
 export default function FormsPreview({ name }: { name: string }) {
   const [checked, setChecked] = useState(false);

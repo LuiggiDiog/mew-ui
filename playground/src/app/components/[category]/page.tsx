@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { Toaster } from "@mew/ui";
+import { Toaster } from "@luiggidiog/mew-ui";
 import { ComponentShowcase } from "../../../components/docs/ComponentShowcase";
 import { DocsSidebar } from "../../../components/docs/DocsSidebar";
 import { CATEGORIES, type CategoryKeyT } from "../../../lib/showcase/categories";

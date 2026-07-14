@@ -1,4 +1,6 @@
-import * as SwitchPrimitive from "@radix-ui/react-switch";
+"use client";
+
+import { Switch as SwitchPrimitive } from "radix-ui";
 import { cn } from "@mew/ui/utils/cn";
 
 interface SwitchProps {

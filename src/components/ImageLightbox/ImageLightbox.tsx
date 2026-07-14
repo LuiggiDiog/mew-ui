@@ -93,7 +93,6 @@ export function ImageLightbox(props: PropsT) {
           className="relative max-w-[90vw] max-h-[90vh]"
           onClick={(e) => e.stopPropagation()}
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={src}
             alt={alt}

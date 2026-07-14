@@ -1,4 +1,4 @@
-import { CodeBlock } from "@mew/ui";
+import { CodeBlock } from "@luiggidiog/mew-ui";
 
 type PropsT = {
   title: string;

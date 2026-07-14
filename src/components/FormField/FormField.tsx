@@ -1,4 +1,4 @@
-import type { ReactNode, HTMLAttributes } from "react";
+import type { HTMLAttributes } from "react";
 import { cn } from "@mew/ui/utils/cn";
 import { Label } from "../Label";
 

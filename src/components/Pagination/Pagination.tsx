@@ -2,9 +2,9 @@ import type { HTMLAttributes } from "react";
 import { cn } from "@mew/ui/utils/cn";
 import { ChevronLeftIcon, ChevronRightIcon } from "@mew/ui/icons";
 
-interface PaginationProps extends HTMLAttributes<HTMLElement> {}
-interface PaginationContentProps extends HTMLAttributes<HTMLUListElement> {}
-interface PaginationItemProps extends HTMLAttributes<HTMLLIElement> {}
+type PaginationProps = HTMLAttributes<HTMLElement>;
+type PaginationContentProps = HTMLAttributes<HTMLUListElement>;
+type PaginationItemProps = HTMLAttributes<HTMLLIElement>;
 
 interface PaginationButtonProps extends HTMLAttributes<HTMLButtonElement> {
   isActive?: boolean;

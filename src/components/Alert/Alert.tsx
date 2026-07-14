@@ -31,8 +31,8 @@ interface AlertProps extends HTMLAttributes<HTMLDivElement> {
   icon?: ReactNode;
 }
 
-interface AlertTitleProps extends HTMLAttributes<HTMLParagraphElement> {}
-interface AlertDescriptionProps extends HTMLAttributes<HTMLParagraphElement> {}
+type AlertTitleProps = HTMLAttributes<HTMLParagraphElement>;
+type AlertDescriptionProps = HTMLAttributes<HTMLParagraphElement>;
 
 export function Alert({ variant = "default", icon, className, children, ...props }: AlertProps) {
   const iconEl = icon !== undefined ? icon : defaultIcons[variant];

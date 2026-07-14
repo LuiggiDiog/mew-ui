@@ -1,12 +1,11 @@
-import { CodeBlock } from "@mew/ui";
+import { CodeBlock } from "@luiggidiog/mew-ui";
 import { DocsSidebar } from "../../../components/docs/DocsSidebar";
 
-const installSnippet = `npm install @mew/ui`;
+const installSnippet = `npm install @luiggidiog/mew-ui`;
 
-const setupSnippet = `import "@mew/ui/styles/tokens.css";
-import "@mew/ui/styles/globals.css";`;
+const setupSnippet = `import "@luiggidiog/mew-ui/styles.css";`;
 
-const usageSnippet = `import { Button, Input } from "@mew/ui";
+const usageSnippet = `import { Button, Input } from "@luiggidiog/mew-ui";
 
 export function Example() {
   return (

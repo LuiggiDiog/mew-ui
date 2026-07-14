@@ -1,13 +1,13 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import * as Icons from "@mew/ui/icons";
-import { CodeBlock, SearchInput } from "@mew/ui";
+import * as Icons from "@luiggidiog/mew-ui/icons";
+import { CodeBlock, SearchInput } from "@luiggidiog/mew-ui";
 import { CategoryNav } from "../../components/docs/CategoryNav";
 import { SHOWCASE_ICONS, type ShowcaseIconNameT } from "../../lib/showcase/icon-registry";
 
 function getIconImportSnippet(name: string) {
-  return `import { ${name} } from "@mew/ui/icons";
+  return `import { ${name} } from "@luiggidiog/mew-ui/icons";
 
 <${name} className="w-4 h-4" />;`;
 }
@@ -25,7 +25,7 @@ export default function IconsPage() {
     <div className="space-y-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-semibold text-text-primary">Icon catalog</h1>
-        <p className="text-sm text-text-secondary">All icon exports from @mew/ui/icons with ready-to-copy usage snippets.</p>
+        <p className="text-sm text-text-secondary">All icon exports from @luiggidiog/mew-ui/icons with ready-to-copy usage snippets.</p>
       </header>
 
       <CategoryNav />
