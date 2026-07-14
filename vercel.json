@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "playground/package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/_next/(.*)",
+      "dest": "/playground/_next/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/playground/$1"
+    }
+  ]
+}
