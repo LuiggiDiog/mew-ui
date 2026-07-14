@@ -10,9 +10,9 @@ const variantStyles = {
   primary:
     "bg-accent text-white hover:bg-accent-hover active:scale-[0.98] transition-colors",
   ghost:
-    "text-text-secondary hover:text-text-primary hover:bg-surface-elevated transition-colors",
+    "bg-transparent text-text-secondary hover:bg-surface-elevated hover:text-text-primary transition-colors",
   outline:
-    "border border-border text-text-primary hover:bg-surface-elevated transition-colors",
+    "border border-border bg-surface text-text-primary hover:bg-surface-elevated transition-colors",
 };
 
 const sizeStyles = {

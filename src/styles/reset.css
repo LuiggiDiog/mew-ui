@@ -5,7 +5,7 @@
 }
 
 :focus-visible {
-  outline: 2px solid var(--mew-color-accent, #6366f1);
+  outline: 2px solid var(--mew-color-accent, #5f62ef);
   outline-offset: 2px;
 }
 
@@ -14,4 +14,34 @@ body {
   font-family: var(--mew-font-sans, system-ui, sans-serif);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  appearance: button;
+  background-color: transparent;
+  background-image: none;
+}
+
+button:disabled,
+[type="button"]:disabled,
+[type="reset"]:disabled,
+[type="submit"]:disabled {
+  cursor: not-allowed;
 }

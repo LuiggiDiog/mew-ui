@@ -12,9 +12,9 @@
   --mew-color-border: #3f3f46;
   --mew-color-text-primary: #fafafa;
   --mew-color-text-secondary: #a1a1aa;
-  --mew-color-accent: #6366f1;
+  --mew-color-accent: #5f62ef;
   --mew-color-accent-hover: #4f46e5;
-  --mew-color-accent-subtle: #6366f11a;
+  --mew-color-accent-subtle: #5f62ef1a;
   --mew-color-success: #10b981;
   --mew-color-error: #ef4444;
   --mew-color-warning: #f59e0b;
@@ -37,6 +37,50 @@
   --color-warning: var(--mew-color-warning);
   --font-sans: var(--mew-font-sans);
   --font-mono: var(--mew-font-mono);
+}
+
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    color: inherit;
+    font: inherit;
+  }
+
+  button,
+  select {
+    text-transform: none;
+  }
+
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+    appearance: button;
+    background-color: transparent;
+    background-image: none;
+  }
+
+  button:disabled,
+  [type="button"]:disabled,
+  [type="reset"]:disabled,
+  [type="submit"]:disabled {
+    cursor: not-allowed;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--mew-color-accent, #5f62ef);
+    outline-offset: 2px;
+  }
 }
 
 @theme inline {
@@ -202,7 +246,7 @@
 }
 
 @utility animate-shimmer {
-  background: linear-gradient(110deg, #18181b 30%, #6366f11a 50%, #18181b 70%);
+  background: linear-gradient(110deg, #18181b 30%, #5f62ef1a 50%, #18181b 70%);
   background-size: 200% 100%;
   animation: var(--animate-mew-shimmer);
 }

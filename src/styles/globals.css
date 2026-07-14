@@ -42,7 +42,7 @@ body {
 /* Focus ring — inside @layer base so Tailwind utilities (outline-none) can override it */
 @layer base {
   :focus-visible {
-    outline: 2px solid #6366f1;
+    outline: 2px solid #5f62ef;
     outline-offset: 2px;
   }
 }
@@ -61,7 +61,7 @@ body {
   background: linear-gradient(
     110deg,
     #18181b 30%,
-    #6366f11a 50%,
+    #5f62ef1a 50%,
     #18181b 70%
   );
   background-size: 200% 100%;

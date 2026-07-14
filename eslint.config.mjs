@@ -6,7 +6,13 @@ import globals from "globals";
 
 export default [
   {
-    ignores: ["dist/**", "node_modules/**", "playground/.next/**"],
+    ignores: [
+      "dist/**",
+      "node_modules/**",
+      "playground/.next/**",
+      ".vercel/**",
+      "playground/.vercel/**",
+    ],
   },
   js.configs.recommended,
   {

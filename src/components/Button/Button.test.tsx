@@ -35,12 +35,14 @@ describe("Button", () => {
 
   it("applies ghost variant class", () => {
     const { container } = render(<Button variant="ghost">Ghost</Button>);
+    expect(container.firstChild).toHaveClass("bg-transparent");
     expect(container.firstChild).toHaveClass("hover:bg-surface-elevated");
   });
 
   it("applies outline variant class", () => {
     const { container } = render(<Button variant="outline">Outline</Button>);
     expect(container.firstChild).toHaveClass("border-border");
+    expect(container.firstChild).toHaveClass("bg-surface");
   });
 
   it("applies sm size class", () => {
